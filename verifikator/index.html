@@ -98,6 +98,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		.content-bobot-pekerjaan {
 			width: 100% !important;
 		}
+		.btn-primary {
+			margin-bottom: 7px;
+		}
 		/*.kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__body .kt-datatable__row > .kt-datatable__cell:last-child {
 			padding-right: 0px;
 		}*/
@@ -399,6 +402,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<th>Toko</th>
 											<th>Bank</th>
 											<th>Bobot Pekerjaan</th>
+											<th>Aksi</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -407,89 +411,44 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>Ahmad Rifaldi</td>
 											<td>1313131313131313</td>
 											<td>
-												<button data-toggle="modal" data-target=".modal-progress" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">0%</button>
+												<span style="color: white" class="btn btn-danger">0%</span>
 											</td>
+											<td>30%</td>
+											<td>30%</td>
+											<td>3</td>
 											<td>
-												<select class="form-control select-2" name="toko">
-													<option>Toko 1</option>
-													<option>Toko 2</option>
-													<option>Toko 3</option>
-													<option>Toko 4</option>
-													<option>Toko 5</option>
-												</select>
-											</td>
-											<td>
-												<select class="form-control select-2" name="bank">
-													<option>Bank 1</option>
-													<option>Bank 2</option>
-													<option>Bank 3</option>
-													<option>Bank 4</option>
-													<option>Bank 5</option>
-												</select>
-											</td>
-											<td>
-												<input style="text-align: center;" disabled="" class="form-control" type="text" value="3" name="bobot_pekerjaan">
-												<button data-toggle="modal" data-target=".bobot-pekerjaan" class="btn btn-primary">Bobot Pekerjaan</button>
+												<a href="edit_progress.html" class="btn btn-primary">Edit</a>
+												<button data-toggle="modal" data-target=".hapus" class="btn btn-warning ">Hapus</button>
 											</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>Fascal Ivandry</td>
+											<td>Ahmad Rifaldi</td>
 											<td>1313131313131313</td>
 											<td>
-												<button data-toggle="modal" data-target=".modal-progress" class="btn btn-bold btn-sm btn-font-sm btn-label-warning">30%</button>
+												<span style="color: white" class="btn btn-warning">30%</span>
 											</td>
+											<td>30%</td>
+											<td>30%</td>
+											<td>46</td>
 											<td>
-												<select class="form-control select-2" name="toko">
-													<option>Toko 1</option>
-													<option>Toko 2</option>
-													<option>Toko 3</option>
-													<option>Toko 4</option>
-													<option>Toko 5</option>
-												</select>
-											</td>
-											<td>
-												<select class="form-control select-2" name="bank">
-													<option>Bank 1</option>
-													<option>Bank 2</option>
-													<option>Bank 3</option>
-													<option>Bank 4</option>
-													<option>Bank 5</option>
-												</select>
-											</td>
-											<td>
-												<input style="text-align: center;" disabled="" class="form-control" type="text" value="64" name="bobot_pekerjaan">
-												<button data-toggle="modal" data-target=".bobot-pekerjaan" class="btn btn-primary">Bobot Pekerjaan</button>
+												<a href="edit_proggress.html" class="btn btn-primary">Edit</a>
+												<button data-toggle="modal" data-target=".hapus" class="btn btn-warning ">Hapus</button>
 											</td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>Aigi Walie</td>
+											<td>Ahmad Rifaldi</td>
 											<td>1313131313131313</td>
 											<td>
-												<button data-toggle="modal" data-target=".modal-progress" class="btn btn-bold btn-sm btn-font-sm btn-label-success">100%</button>
+												<span style="color: white" class="btn btn-success">100%</span>
 											</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>50</td>
 											<td>
-												<select class="form-control select-2" name="toko">
-													<option>Toko 1</option>
-													<option>Toko 2</option>
-													<option>Toko 3</option>
-													<option>Toko 4</option>
-													<option>Toko 5</option>
-												</select>
-											</td>
-											<td>
-												<select class="form-control select-2" name="bank">
-													<option>Bank 1</option>
-													<option>Bank 2</option>
-													<option>Bank 3</option>
-													<option>Bank 4</option>
-													<option>Bank 5</option>
-												</select>
-											</td>
-											<td>
-												<input style="text-align: center;" disabled="" class="form-control" type="text" value="100" name="bobot_pekerjaan">
-												<button data-toggle="modal" data-target=".bobot-pekerjaan" class="btn btn-primary">Bobot Pekerjaan</button>
+												<a href="edit_proggress.html" class="btn btn-primary">Edit</a>
+												<button data-toggle="modal" data-target=".hapus" class="btn btn-warning ">Hapus</button>
 											</td>
 										</tr>
 									</tbody>
@@ -921,7 +880,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			{
 				field: 'No',
 				textAlign: 'center',
-				width : 20,
+				width : 30,
 
 			},
 			{
@@ -937,23 +896,26 @@ License: You must have a valid license purchased only from themeforest(the above
 			{
 				field: 'Progress',
 				textAlign: 'center',
-				width: 60,
+				width : 60,
 
 			},
 			{
 				field: 'Toko',
 				textAlign: 'center',
-				width: 150,
 
 			},
 			{
 				field: 'Bank',
 				textAlign: 'center',
-				width: 150,
 
 			},
 			{
 				field: 'Bobot Pekerjaan',
+				textAlign: 'center',
+
+			},
+			{
+				field: 'Aksi',
 				textAlign: 'center',
 
 			}

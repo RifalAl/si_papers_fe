@@ -177,7 +177,7 @@
 					</button>
 					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 						<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
-							<img style="width: auto; height: 35px; margin-top: 15px" src="../assets/media/misc/user_super_admin.png">
+							<img style="width: auto; height: 35px; margin-top: 15px" src="../assets/media/misc/user_verifikator.png">
 						</div>
 					</div>
 					<!-- end:: Header Menu -->
@@ -188,8 +188,8 @@
 							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
 								<div class="kt-header__topbar-user">
 									<span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-									<span class="kt-header__topbar-username kt-hidden-mobile">Rifal</span>
-									<img class="" alt="Pic" src="../assets/media/users/300_25.jpg" />
+									<span class="kt-header__topbar-username kt-hidden-mobile">Facal</span>
+									<img class="" alt="Pic" src="../assets/media/users/300_24.jpg" />
 								</div>
 							</div>
 							<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
@@ -200,7 +200,7 @@
 										<img class="" alt="Pic" src="../assets/media/users/300_25.jpg" />
 									</div>
 									<div class="kt-user-card__name">
-										Rifal
+										Fascal
 									</div>
 									<div class="kt-user-card__badge">
 										<span class="btn btn-success btn-sm btn-bold btn-font-md">10 messages</span>
@@ -427,13 +427,13 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Nama Kegiatan</label>
 									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan">
+										<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan" name="nama_kegiatan">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Provinsi</label>
 									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-provinsi" name="provinsi">
+										<select style="width: 100%" class="form-control m-select2 select-provinsi" name="provinsi" name="">
 											<option value="0">--Pilih Provinsi--</option>
 											<option value="1">Area 1</option>
 											<option value="2">Area 2</option>
@@ -465,7 +465,7 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Kecamatan</label>
 									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
+										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kecamatan">
 											<option value="0">--Pilih Kecamatan--</option>
 											<option value="1">Area 1</option>
 											<option value="2">Area 2</option>
@@ -497,13 +497,13 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Tanggal Pelaksanaan</label>
 									<div class="col-9">
-										<input class="form-control" type="date" value="2011-08-19" id="tanggal_pelaksanaan_kegiatan">
+										<input class="form-control" type="date" placeholder="contoh 09/25/2019" name="tanggal_pelaksanaan_kegiatan">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Jenis Kegiatan(Rembuk)</label>
 									<div class="col-9">
-										<select class="form-control" id="jenis_kegiatan">
+										<select class="form-control" id="jenis_kegiatan" name="jenis_kegiatan">
 											<option value="0">-Pilih jenis kegiatan-</option>
 											<option value="1">Kegiatan 1</option>
 											<option value="2">Kegiatan 2</option>
@@ -516,18 +516,18 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Narasi</label>
 									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="narasi_kegiatan" rows="3" placeholder="input narasi"></textarea>
+										<textarea style="resize: none" class="form-control" id="narasi_kegiatan" rows="3" placeholder="input narasi" name="narasi_kegiatan"></textarea>
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Jumlah Peserta</label>
 									<div class="col-9">
 										<div style="margin-bottom: 20px" class="input-group">
-											<input id="jumlah_peserta_laki_laki" type="number" class="form-control" placeholder="jumlah user laki-laki" aria-describedby="basic-addon2">
+											<input id="jumlah_peserta_laki_laki" type="number" min="0" class="form-control" placeholder="jumlah user laki-laki" aria-describedby="basic-addon2" name="jumlah_peserta_laki_laki">
 											<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
 										</div>
 										<div class="input-group">
-											<input id="jumlah_peserta_perempuan" type="number" class="form-control" placeholder="jumlah user perempuan" aria-describedby="basic-addon2">
+											<input id="jumlah_peserta_perempuan" min="0" type="number" class="form-control" placeholder="jumlah user perempuan" aria-describedby="basic-addon2" name="jumlah_peserta_perempuan">
 											<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
 										</div>
 									</div>
@@ -536,7 +536,7 @@
 									<label for="example-text-input" class="col-3 col-form-label">Foto Kegiatan</label>
 									<div class="col-9">
 										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_kegiatan">
+											<input type="file" class="custom-file-input" id="foto_kegiatan" name="foto_kegiatan">
 											<label class="custom-file-label" for="customFile">Choose file</label>
 										</div>
 									</div>
@@ -563,7 +563,7 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Nama Kegiatan</label>
 									<div class="col-9">
-										<input class="form-control" type="text" value="Sosialisasi rumah swasembada" id="nama_kegiatan">
+										<input class="form-control" type="text" value="Sosialisasi rumah swasembada" id="nama_kegiatan" name="nama_kegiatan">
 									</div>
 								</div>
 								<div class="form-group row">
@@ -633,13 +633,13 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Tanggal Pelaksanaan</label>
 									<div class="col-9">
-										<input class="form-control" type="date" value="2011-08-19" id="tanggal_pelaksanaan_kegiatan">
+										<input class="form-control" type="date" placeholder="contoh 03/20/2019" id="tanggal_pelaksanaan_kegiatan" name="tanggal_pelaksanaan_kegiatan">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Jenis Kegiatan(Rembuk)</label>
 									<div class="col-9">
-										<select class="form-control" id="jenis_kegiatan">
+										<select class="form-control" id="jenis_kegiatan" name="jenis_kegiatan">
 											<option value="0">-Pilih jenis kegiatan-</option>
 											<option value="1">Kegiatan 1</option>
 											<option value="2">Kegiatan 2</option>
@@ -652,18 +652,18 @@
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Narasi</label>
 									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="narasi_kegiatan" rows="4" placeholder="input narasi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit at metus convallis semper sed nec dolor. Morbi vestibulum mattis metus sed posuere. Maecenas ac mauris eget mauris suscipit dictum non at augue. Integer consectetur, arcu id ultrices maximus, mi justo porta elit, in molestie mauris tellus et turpis. Sed vitae ultricies mi. Phasellus vitae neque consectetur, pretium nulla at, mollis magna. In vitae accumsan nulla.</textarea>
+										<textarea style="resize: none" class="form-control" id="narasi_kegiatan" rows="4" placeholder="input narasi" name="narasi_kegiatan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit at metus convallis semper sed nec dolor. Morbi vestibulum mattis metus sed posuere. Maecenas ac mauris eget mauris suscipit dictum non at augue. Integer consectetur, arcu id ultrices maximus, mi justo porta elit, in molestie mauris tellus et turpis. Sed vitae ultricies mi. Phasellus vitae neque consectetur, pretium nulla at, mollis magna. In vitae accumsan nulla.</textarea>
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Jumlah Peserta</label>
 									<div class="col-9">
 										<div style="margin-bottom: 20px" class="input-group">
-											<input id="jumlah_peserta_laki_laki" type="number" class="form-control" placeholder="jumlah user laki-laki" aria-describedby="basic-addon2" value="20">
+											<input id="jumlah_peserta_laki_laki" type="number" min="0" class="form-control" placeholder="jumlah user laki-laki" aria-describedby="basic-addon2" value="20" name="jumlah_peserta_laki_laki">
 											<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
 										</div>
 										<div class="input-group">
-											<input id="jumlah_peserta_perempuan" type="number" class="form-control" placeholder="jumlah user perempuan" aria-describedby="basic-addon2" value="17">
+											<input id="jumlah_peserta_perempuan" min="0" type="number" class="form-control" placeholder="jumlah user perempuan" aria-describedby="basic-addon2" value="17" name="jumlah_peserta_perempuan">
 											<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
 										</div>
 									</div>
@@ -672,7 +672,7 @@
 									<label for="example-text-input" class="col-3 col-form-label">Foto Kegiatan</label>
 									<div class="col-9">
 										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_kegiatan">
+											<input type="file" class="custom-file-input" id="foto_kegiatan" name="foto_kegiatan">
 											<label class="custom-file-label" for="customFile">Choose file</label>
 										</div>
 									</div>
