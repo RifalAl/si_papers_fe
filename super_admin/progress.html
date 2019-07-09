@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 7
@@ -101,6 +101,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		}
 		.content-bobot-pekerjaan {
 			width: 100% !important;
+		}
+		.btn-primary {
+			margin-bottom: 7px;
 		}
 		tr th {
 			background-color: #e8e9f4 !important;
@@ -407,6 +410,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<th>Toko</th>
 											<th>Bank</th>
 											<th>Bobot Pekerjaan</th>
+											<th>Aksi</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -415,89 +419,44 @@ License: You must have a valid license purchased only from themeforest(the above
 											<td>Ahmad Rifaldi</td>
 											<td>1313131313131313</td>
 											<td>
-												<button data-toggle="modal" data-target=".modal-progress" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">0%</button>
+												<span style="color: white" class="btn btn-danger">0%</span>
 											</td>
+											<td>30%</td>
+											<td>30%</td>
+											<td>3</td>
 											<td>
-												<select class="form-control" name="toko">
-													<option>Toko 1</option>
-													<option>Toko 2</option>
-													<option>Toko 3</option>
-													<option>Toko 4</option>
-													<option>Toko 5</option>
-												</select>
-											</td>
-											<td>
-												<select class="form-control" name="bank">
-													<option>Bank 1</option>
-													<option>Bank 2</option>
-													<option>Bank 3</option>
-													<option>Bank 4</option>
-													<option>Bank 5</option>
-												</select>
-											</td>
-											<td>
-												<input style="text-align: center;" disabled="" class="form-control" type="text" value="3" name="bobot_pekerjaan">
-												<button data-toggle="modal" data-target=".bobot-pekerjaan" class="btn btn-primary">Bobot Pekerjaan</button>
+												<a href="edit_proggress.html" class="btn btn-primary">Edit</a>
+												<button data-toggle="modal" data-target=".hapus" class="btn btn-warning ">Hapus</button>
 											</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>Fascal Ivandry</td>
+											<td>Ahmad Rifaldi</td>
 											<td>1313131313131313</td>
 											<td>
-												<button data-toggle="modal" data-target=".modal-progress" class="btn btn-bold btn-sm btn-font-sm btn-label-warning">30%</button>
+												<span style="color: white" class="btn btn-warning">30%</span>
 											</td>
+											<td>30%</td>
+											<td>30%</td>
+											<td>46</td>
 											<td>
-												<select class="form-control" name="toko">
-													<option>Toko 1</option>
-													<option>Toko 2</option>
-													<option>Toko 3</option>
-													<option>Toko 4</option>
-													<option>Toko 5</option>
-												</select>
-											</td>
-											<td>
-												<select class="form-control" name="bank">
-													<option>Bank 1</option>
-													<option>Bank 2</option>
-													<option>Bank 3</option>
-													<option>Bank 4</option>
-													<option>Bank 5</option>
-												</select>
-											</td>
-											<td>
-												<input style="text-align: center;" disabled="" class="form-control" type="text" value="64" name="bobot_pekerjaan">
-												<button data-toggle="modal" data-target=".bobot-pekerjaan" class="btn btn-primary">Bobot Pekerjaan</button>
+												<a href="edit_proggress.html" class="btn btn-primary">Edit</a>
+												<button data-toggle="modal" data-target=".hapus" class="btn btn-warning ">Hapus</button>
 											</td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>Aigi Walie</td>
+											<td>Ahmad Rifaldi</td>
 											<td>1313131313131313</td>
 											<td>
-												<button data-toggle="modal" data-target=".modal-progress" class="btn btn-bold btn-sm btn-font-sm btn-label-success">100%</button>
+												<span style="color: white" class="btn btn-success">100%</span>
 											</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>50</td>
 											<td>
-												<select class="form-control" name="toko">
-													<option>Toko 1</option>
-													<option>Toko 2</option>
-													<option>Toko 3</option>
-													<option>Toko 4</option>
-													<option>Toko 5</option>
-												</select>
-											</td>
-											<td>
-												<select class="form-control" name="bank">
-													<option>Bank 1</option>
-													<option>Bank 2</option>
-													<option>Bank 3</option>
-													<option>Bank 4</option>
-													<option>Bank 5</option>
-												</select>
-											</td>
-											<td>
-												<input style="text-align: center;" disabled="" class="form-control" type="text" value="100" name="bobot_pekerjaan">
-												<button data-toggle="modal" data-target=".bobot-pekerjaan" class="btn btn-primary">Bobot Pekerjaan</button>
+												<a href="edit_proggress.html" class="btn btn-primary">Edit</a>
+												<button data-toggle="modal" data-target=".hapus" class="btn btn-warning ">Hapus</button>
 											</td>
 										</tr>
 									</tbody>
@@ -511,28 +470,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- end:: Content -->
 				</div>
 				<!-- Begin Modal -->
-				<div class="modal fade" id="import_pb" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Import PB</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<small>silahkan pilih file PB untuk diimport</small>
-								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="customFile">
-									<label class="custom-file-label" for="customFile">pilih file PB....</label>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-primary sweetalert2_import" data-dismiss="modal">Import</button>
-							</div>
-						</div>
-					</div>
-				</div>
 				<!-- Modal Hapus -->
 				<div class="modal fade hapus" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
@@ -662,6 +599,18 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 								<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Hapus -->
+				<div class="modal fade hapus" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content hapus-data">
+							<div align="center" class="modal-body">
+								<h4 style="margin-bottom: 30px">Apakah anda ingin menghapus kegiatan ini ?</h4>
+								<button class="btn btn-success sweetalert2_hapus" data-dismiss="modal">ya</button>
+								<button class="btn btn-danger" data-dismiss="modal">tidak</button>
 							</div>
 						</div>
 					</div>
@@ -958,7 +907,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			{
 				field: 'No',
 				textAlign: 'center',
-				width : 50,
+				width : 30,
 
 			},
 			{
@@ -974,6 +923,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			{
 				field: 'Progress',
 				textAlign: 'center',
+				width : 60,
 
 			},
 			{
@@ -988,6 +938,11 @@ License: You must have a valid license purchased only from themeforest(the above
 			},
 			{
 				field: 'Bobot Pekerjaan',
+				textAlign: 'center',
+
+			},
+			{
+				field: 'Aksi',
 				textAlign: 'center',
 
 			}

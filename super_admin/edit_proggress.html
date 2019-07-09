@@ -386,7 +386,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="form-group row">
 									<label for="example-text-input" class="col-4 col-form-label">Proggress</label>
 									<div class="col-8">
-										<select class="form-control" name="progress_pekerjaan">
+										<select class="form-control" name="progress_pekerjaan" onchange="showDiv(this)">
 											<option value="0" >--Pilih Progress--</option>
 											<option value="1">0%</option>
 											<option value="2">30%</option>
@@ -394,7 +394,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</select>
 									</div>
 								</div>
-								<div id="proggress_0" class="form-group row">
+								<div id="proggress_0" class="form-group row" style="display: none;">
 									<label for="example-text-input" class="col-4 col-form-label">Foto Progress 0%</label>
 									<div class="col-8">
 										<div class="custom-file">
@@ -403,7 +403,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</div>
 								</div>
-								<div id="proggress_30" class="form-group row" style="display: none">
+								<div id="proggress_30" class="form-group row" style="display: none;">
 									<label for="example-text-input" class="col-4 col-form-label">Foto Progress 30%</label>
 									<div class="col-8">
 										<div class="custom-file">
@@ -425,10 +425,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									<label for="example-text-input" class="col-4 col-form-label">Toko</label>
 									<div class="col-8">
 										<select class="form-control select-2" name="toko">
-											<option value="0" >--Pilih Toko--</option>
-											<option value="1">Toko 1</option>
-											<option value="2">Toko 2</option>
-											<option value="3">Toko 3</option>
+											<option value="0" >--Pilih Progress Toko--</option>
+											<option value="1">0%</option>
+											<option value="2">30 %</option>
+											<option value="3">100%</option>
 										</select>
 									</div>
 								</div>
@@ -995,6 +995,23 @@ License: You must have a valid license purchased only from themeforest(the above
 			}
 			],
 		});
+	</script>
+	<script type="text/javascript">
+		function showDiv(select){
+			if(select.value==1){
+				document.getElementById('proggress_0').style.display = "flex";
+				document.getElementById('proggress_30').style.display = "none";
+				document.getElementById('proggress_100').style.display = "none";
+			} else if (select.value==2){
+				document.getElementById('proggress_0').style.display = "none";
+				document.getElementById('proggress_30').style.display = "flex";
+				document.getElementById('proggress_100').style.display = "none";
+			}else if (select.value==3) {
+				document.getElementById('proggress_0').style.display = "none";
+				document.getElementById('proggress_30').style.display = "none";
+				document.getElementById('proggress_100').style.display = "flex";
+			}
+		}
 	</script>
 </body>
 
