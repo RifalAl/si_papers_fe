@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Super Admin | Toko</title>
+	<title>Super Admin | Tambah Admin</title>
 	<meta name="description" content="Page with empty content">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -93,8 +93,18 @@ License: You must have a valid license purchased only from themeforest(the above
 		.kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__head .kt-datatable__row > .kt-datatable__cell:last-child {
 			padding-right: 10px;
 		}
-		.modal-content {
-			width: 140%;
+		.hapus-data {
+			width: 80% !important;
+		}
+		.content-progress {
+			width: 150% !important;
+		}
+		.content-bobot-pekerjaan {
+			width: 100% !important;
+		}
+		#tempat_foto{
+			max-width: 180px;
+			max-height: 240px;
 		}
 		tr th {
 			background-color: #e8e9f4 !important;
@@ -164,7 +174,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 						<ul class="kt-menu__nav ">
-							<li class="kt-menu__item " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
+							<li class="kt-menu__item  " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
 							</li>
 							<li class="kt-menu__item " aria-haspopup="true"><a href="progress.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-infographic"></i><span class="kt-menu__link-text">Progress</span></a>
 							</li>
@@ -174,19 +184,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							</li>
 							<li class="kt-menu__item " aria-haspopup="true"><a href="kegiatan_masyarakat.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-calendar-2"></i><span class="kt-menu__link-text">Kegiatan Masyarakat</span></a>
 							</li>
-							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="toko.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-luggage-cart"></i><span class="kt-menu__link-text">Toko</span></a>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="toko.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-luggage-cart"></i><span class="kt-menu__link-text">Toko</span></a>
 							</li>
-							<li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-									<span class="kt-menu__link-icon fa fa-user-cog"></span>
-									<span class="kt-menu__link-text">Pengaturan Akun</span>
-									<i class="kt-menu__ver-arrow la la-angle-right"></i>
-								</a>
-								<div class="kt-menu__submenu " kt-hidden-height="240" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
+							<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fa fa-user-cog"></i><span class="kt-menu__link-text">Pengaturan Akun</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+								<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Pengaturan Akun</span></span></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="manajemen_akun.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Manajemen Akun</span></a></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="akun_saya.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Akun Saya</span></a></li>
+										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="akun_saya.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Akun Saya</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -233,69 +238,15 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="kt-user-card__name">
 										Rifal
 									</div>
-									<div class="kt-user-card__badge">
-										<span class="btn btn-success btn-sm btn-bold btn-font-md">10 messages</span>
-									</div>
 								</div>
 
 								<!--end: Head -->
 
 								<!--begin: Navigation -->
 								<div class="kt-notification">
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-calendar-3 kt-font-success"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Profile
-											</div>
-											<div class="kt-notification__item-time">
-												Account settings and more
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-mail kt-font-warning"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Messages
-											</div>
-											<div class="kt-notification__item-time">
-												Inbox and tasks
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-rocket-1 kt-font-danger"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Activities
-											</div>
-											<div class="kt-notification__item-time">
-												Logs and notifications
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-hourglass kt-font-brand"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Tasks
-											</div>
-											<div class="kt-notification__item-time">
-												latest tasks and projects
-											</div>
-										</div>
-									</a>
+									
 									<div class="kt-notification__custom">
-										<a href="custom_user_login-v2.html" target="_blank" class="btn btn-label-brand btn-sm btn-bold">Sign Out</a>
+										<a href="#" class="btn btn-label-brand btn-sm btn-bold">Log Out</a>
 									</div>
 								</div>
 
@@ -316,10 +267,16 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 						<div class="kt-subheader__main">
 							<h3 class="kt-subheader__title">
-							Toko </h3>
+							Pengaturan Akun </h3>
 							<span class="kt-subheader__separator kt-hidden"></span>
 							<div class="kt-subheader__breadcrumbs">
 								<a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+								<span class="kt-subheader__breadcrumbs-separator"></span>
+								<a href="manajemen_akun.html" class="kt-subheader__breadcrumbs-link">
+								Akun Saya</a>
+								<span class="kt-subheader__breadcrumbs-separator"></span>
+								<a href="manajemen_akun.html" class="kt-subheader__breadcrumbs-link">
+								Edit Akun</a>
 							</div>
 						</div>
 					</div>
@@ -327,182 +284,75 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 						<!--begin::Portlet-->
-						<div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="kt_page_portlet">
+						
+
+						<div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="">
 							<div class="kt-portlet__head kt-portlet__head--lg">
 								<div class="kt-portlet__head-label">
-									<h3 class="kt-portlet__head-title">Daftar Toko</h3>
+									<h3 class="kt-portlet__head-title">Edit Akun</h3>
 								</div>
-								<div class="kt-portlet__head-toolbar">
-									<div class="btn-group">
-										<button data-toggle="modal" data-target="#tambah_toko" type="button" class="btn btn-success">
-											<i class="fa fa-plus"></i>
-											<span class="kt-hidden-mobile">Tambah Toko</span>
-										</button>
+							</div>
+							<form class="kt-form">
+								<div class="kt-portlet__body">
+									<div style="margin-bottom: 30px" align="center">
+										<img id="tempat_foto" src="../assets/media/users/300_25.jpg" alt="foto admin" />
+									</div>
+									
+									<div style="" class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Foto admin</label>
+										<div class="col-8">
+											<div class="custom-file">
+												<input type="file" class="custom-file-input" id="foto_admin" name="foto_admin" onchange="readURL(this);">
+												<label class="custom-file-label" for="customFile">Choose file</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Nama</label>
+										<div class="col-8">
+											<input class="form-control" value="Ahmad Rifaldi" type="text" id="nama_admin" name="nama_admin">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Telepon</label>
+										<div class="col-8">
+											<input class="form-control" type="text" value="085145322137" id="telepon" name="telepon">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Email</label>
+										<div class="col-8">
+											<input class="form-control" type="email" value="algraphicdartist@gmail.com" id="email" name="email">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Periode</label>
+										<div class="col-8">
+											<input class="form-control" type="text" value="2018" id="periode" name="periode">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Username</label>
+										<div class="col-8">
+											<input class="form-control" type="text" value="rif4l" id="username" name="username">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Password</label>
+										<div class="col-8">
+											<input class="form-control" type="password" value="bukabuka" id="password" name="password">
+											<input style="margin-top: 10px" class="form-control" type="password" placeholder="input password sekali lagi" id="password" name="password">
+											<small style="color: red">Password tidak cocok</small>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="kt-portlet__body">
-								<!--begin: Datatable -->
-								<table class="kt-datatable table table-striped- table-bordered table-hover table-checkable" id="tbl_list_kantor">
-									<thead>
-										<tr>
-											<th>No</th>
-											<th>Nama Toko</th>
-											<th>Pemilik</th>
-											<th>No KTP</th>
-											<th>Alamat</th>
-											<th>Telepon</th>
-											<th>Aksi</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Toko Agung</td>
-											<td>Doyo Molis</td>
-											<td>13313133133313</td>
-											<td>Jl. Durina No. 92</td>
-											<td>085145322137</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>7</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>8</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>9</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>10</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>11</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>12</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-										<tr>
-											<td>13</td>
-											<td>Toko Mandiri</td>
-											<td>Fascal Ivandry</td>
-											<td>13313133133313</td>
-											<td>Jl. Mangga No. 12</td>
-											<td>081234910232</td>
-											<td>
-												<button data-toggle="modal" data-target=".edit_info_toko" type="button" style="color:white" class="btn btn-warning"><i class="flaticon-edit"></i></button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<!--end: Datatable -->
-							</div>
+								<div class="kt-portlet__foot">
+									<div align="right">
+										<a href="manajemen_akun.html" class="btn btn-secondary">Kembali</a>
+										<button type="button" class="btn btn-primary sweetalert2_simpan">Simpan</button>
+									</div>
+								</div>
+							</form>
 						</div>
 
 						<!--end::Portlet-->
@@ -510,286 +360,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- end:: Content -->
 				</div>
 				<!-- Begin Modal -->
-				<!-- Tambah Toko -->
-				<div class="modal fade" id="tambah_toko" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Tambah Toko</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Nama Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nama toko" id="nama_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Pemilik Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nama pemilik toko" id="nama_pemilik_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">No. KTP</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nomer KTP" id="no_ktp">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Bank - No Rekening</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input bank dan no.rekening" id="bank_norek">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">SIUP Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input SIUP" id="siup_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">SITU Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input SITU" id="situ_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Alamat</label>
-									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="alamat_toko" rows="3" placeholder="input alamat"></textarea>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Provinsi</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-provinsi" name="provinsi">
-											<option value="0">--Pilih Provinsi--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Kabupaten</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
-											<option value="0">--Pilih Kabupaten--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Kecamatan</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
-											<option value="0">--Pilih Kecamatan--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Desa</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-desa" name="desa">
-											<option value="0">--Pilih Desa--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">No. Telpon</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nomer telpon" id="no_telpon">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Foto Toko</label>
-									<div class="col-9">
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_toko">
-											<label class="custom-file-label" for="customFile">Choose file</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Edit Info Toko -->
-				<div class="modal fade edit_info_toko" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Edit Informasi Toko</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Nama Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="Toko Agung" id="nama_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Pemilik Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="Doyo Molis" id="nama_pemilik_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">No. KTP</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="12313123123123" id="no_ktp">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Bank - No Rekening</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="Bank BTPN - 123123123" id="bank_norek">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">SIUP Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="-" id="siup_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">SITU Toko</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="-" id="situ_toko">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Alamat</label>
-									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="alamat_toko" rows="3">Jl. Durian No.92, Palopo</textarea>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Provinsi</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-provinsi" name="provinsi">
-											<option value="0">--Pilih Provinsi--</option>
-											<option value="1">Area 1</option>
-											<option selected="" value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Kabupaten</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
-											<option value="0">--Pilih Kabupaten--</option>
-											<option selected value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Kecamatan</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
-											<option value="0">--Pilih Kecamatan--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option selected value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Desa</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-desa" name="desa">
-											<option value="0">--Pilih Desa--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">No. Telpon</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="085145322137" id="no_telpon">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Foto Toko</label>
-									<div class="col-9">
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_toko">
-											<label class="custom-file-label" for="customFile">Choose file</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				
 				<!-- End Modal -->
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
@@ -948,6 +519,10 @@ License: You must have a valid license purchased only from themeforest(the above
 		         $('.select-desa, .desa_validate').select2({
 		         	placeholder: "Select a state"
 		         });
+		         // desa
+		         $('.select-2, .select-2_validate').select2({
+		         	placeholder: "Select a state"
+		         });
 
 		     }
 
@@ -994,6 +569,12 @@ License: You must have a valid license purchased only from themeforest(the above
 	    	$('.sweetalert2_simpan').click(function(e) {
 	    		swal.fire("Berhasil!", "Data yang anda input telah tersimpan!", "success");
 	    	});
+	    	$('.sweetalert2_import').click(function(e) {
+	    		swal.fire("Berhasil!", "File anda berhasil diimport!", "success");
+	    	});
+	    	$('.sweetalert2_hapus').click(function(e) {
+	    		swal.fire("Berhasil!", "Data anda telah dihapus!", "success");
+	    	});
 
 	        // Sweetalert Demo 5
 	        $('#kt_sweetalert_demo_5').click(function(e) {
@@ -1008,108 +589,38 @@ License: You must have a valid license purchased only from themeforest(the above
 	        		showCancelButton: true,
 	        		cancelButtonText: "<span><i class='la la-thumbs-down'></i><span>No, thanks</span></span>",
 	        		cancelButtonClass: "btn btn-secondary--pill--icon"
-		        	});
-		        });
-		    };
+	        	});
+	        });
+	    };
 
 	    return {
 	        // Init
 	        init: function() {
 	        	initDemos();
-		        },
-		    };
-		}();
+	        },
+	    };
+	}();
 
 		// Class Initialization
 		jQuery(document).ready(function() {
 			KTSweetAlert2Demo.init();
 		});
 	</script>
+	<script>
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
 
-	<!-- Datatable -->
-	<script type="text/javascript">
-		var tbl_list_kantor = $('#tbl_list_kantor').KTDatatable({
-			data: {
-				saveState: {cookie: false},
-				/*type: 'remote',
-			        source: {
-			          read: {
-			            // sample GET method
-			            method: 'GET',
-			            url: 'https://keenthemes.com/metronic/preview/inc/api/datatables/demos/default.php',
-			            map: function(raw) {
-			              // sample data mapping
-			              var dataSet = raw;
-			              if (typeof raw.data !== 'undefined') {
-			                dataSet = raw.data;
-			              }
-			              return dataSet;
-			            },
-			          },
-			        },
-			        pageSize: 10,
-			        serverPaging: true,
-			        serverFiltering: true,
-			        serverSorting: true,*/
-			    },
-			// layout definition
-			layout: {
-				theme: 'default', // datatable theme
-				class: '', // custom wrapper class
-				scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
-				// height: 450, // datatable's body's fixed height
-				footer: false ,// display/hide footer
-				
-			},
+				reader.onload = function (e) {
+					$('#tempat_foto')
+					.attr('src', e.target.result);
+				};
 
-			// column sorting
-			sortable: true,
-			search: {
-				input: $('#generalSearch'),
-			},
-			columns: [
-
-			{
-				field: 'No',
-				textAlign: 'center',
-				width : 50,
-
-			},
-			{
-				field: 'Nama Toko',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'Pemilik',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'No KTP',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'Alamat',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'Telepon',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'Aksi',
-				textAlign: 'center',
-				width: 50,
-
+				reader.readAsDataURL(input.files[0]);
 			}
-			],
-		});
+		}
 	</script>
 </body>
 
 <!-- end::Body -->
-</html>
+</html><a href=""></a>

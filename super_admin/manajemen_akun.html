@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Super Admin | Progress</title>
+	<title>Super Admin | Manajemen Akun</title>
 	<meta name="description" content="Page with empty content">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -89,21 +89,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon_xlP_icon.ico" />
 	<style>
-		.kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__body .kt-datatable__row > .kt-datatable__cell:last-child,
-		.kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__head .kt-datatable__row > .kt-datatable__cell:last-child {
-			padding-right: 10px;
-		}
-		.hapus-data {
-			width: 80% !important;
-		}
-		.content-progress {
-			width: 150% !important;
-		}
-		.content-bobot-pekerjaan {
-			width: 100% !important;
-		}
-		tr th {
-			background-color: #e8e9f4 !important;
+		.modal-reset-password {
+			width: 80%;
 		}
 	</style>
 </head>
@@ -124,8 +111,6 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<div class="kt-header-mobile__toolbar">
 			<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
 		</div>
 	</div>
 
@@ -145,22 +130,6 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 					</div>
 					<div class="kt-aside__brand-tools">
-						<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
-							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									<polygon id="Shape" points="0 0 24 0 24 24 0 24" />
-									<path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" id="Path-94" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) " />
-									<path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" id="Path-94" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) " />
-								</g>
-							</svg></span>
-							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									<polygon id="Shape" points="0 0 24 0 24 24 0 24" />
-									<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" id="Path-94" fill="#000000" fill-rule="nonzero" />
-									<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" id="Path-94" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) " />
-								</g>
-							</svg></span>
-						</button>
 					</div>
 				</div>
 
@@ -170,9 +139,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 						<ul class="kt-menu__nav ">
-							<li class="kt-menu__item " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
+							<li class="kt-menu__item  " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
 							</li>
-							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="progress.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-infographic"></i><span class="kt-menu__link-text">Progress</span></a>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="progress.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-infographic"></i><span class="kt-menu__link-text">Progress</span></a>
 							</li>
 							<li class="kt-menu__item " aria-haspopup="true"><a href="fasilitator.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-avatar"></i><span class="kt-menu__link-text">Fasilitator</span></a>
 							</li>
@@ -182,16 +151,11 @@ License: You must have a valid license purchased only from themeforest(the above
 							</li>
 							<li class="kt-menu__item " aria-haspopup="true"><a href="toko.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-luggage-cart"></i><span class="kt-menu__link-text">Toko</span></a>
 							</li>
-							<li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-									<span class="kt-menu__link-icon fa fa-user-cog"></span>
-									<span class="kt-menu__link-text">Pengaturan Akun</span>
-									<i class="kt-menu__ver-arrow la la-angle-right"></i>
-								</a>
-								<div class="kt-menu__submenu " kt-hidden-height="240" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
+							<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon fa fa-user-cog"></i><span class="kt-menu__link-text">Pengaturan Akun</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+								<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text">Pengaturan Akun</span></span></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="manajemen_akun.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Manajemen Akun</span></a></li>
+										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="manajemen_akun.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Manajemen Akun</span></a></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="akun_saya.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Akun Saya</span></a></li>
 									</ul>
 								</div>
@@ -239,69 +203,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="kt-user-card__name">
 										Rifal
 									</div>
-									<div class="kt-user-card__badge">
-										<span class="btn btn-success btn-sm btn-bold btn-font-md">10 messages</span>
-									</div>
 								</div>
-
 								<!--end: Head -->
-
 								<!--begin: Navigation -->
 								<div class="kt-notification">
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-calendar-3 kt-font-success"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Profile
-											</div>
-											<div class="kt-notification__item-time">
-												Account settings and more
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-mail kt-font-warning"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Messages
-											</div>
-											<div class="kt-notification__item-time">
-												Inbox and tasks
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-rocket-1 kt-font-danger"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Activities
-											</div>
-											<div class="kt-notification__item-time">
-												Logs and notifications
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-hourglass kt-font-brand"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Tasks
-											</div>
-											<div class="kt-notification__item-time">
-												latest tasks and projects
-											</div>
-										</div>
-									</a>
 									<div class="kt-notification__custom">
-										<a href="custom_user_login-v2.html" target="_blank" class="btn btn-label-brand btn-sm btn-bold">Sign Out</a>
+										<a href="#" target="_blank" class="btn btn-label-brand btn-sm btn-bold">Log Out</a>
 									</div>
 								</div>
 
@@ -314,7 +221,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
 					<!-- end:: Header Topbar -->
 				</div>
-
 				<!-- end:: Header -->
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
 
@@ -322,209 +228,126 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 						<div class="kt-subheader__main">
 							<h3 class="kt-subheader__title">
-							Progress </h3>
+							Pengaturan Akun </h3>
 							<span class="kt-subheader__separator kt-hidden"></span>
 							<div class="kt-subheader__breadcrumbs">
 								<a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
 								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="" class="kt-subheader__breadcrumbs-link">
-								Edit Progress </a>
+								<a href="manajemen_akun.html" class="kt-subheader__breadcrumbs-link">
+								Manajemen Akun </a>
 							</div>
+
 						</div>
 					</div>
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<!--begin::Portlet-->
-						<div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="">
-							<div class="kt-portlet__head kt-portlet__head--lg">
-								<div class="kt-portlet__head-label">
-									<h3 class="kt-portlet__head-title">Foto Progress</h3>
-								</div>
-							</div>
-							<div class="kt-portlet__body">
-								<div align="center" class="row">
-									<div class="col-sm-4">
-										<h5>Progress 0%</h5>
-										<span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Selesai</span>
-										<div style="margin-top:20px;">
-
+						<div class="row">
+							<div class="col-md-12">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<h3 class="kt-portlet__head-title">
+												Daftar Akun
+											</h3>
 										</div>
-										<div style="margin-top:20px">
-											<img style="width: 100%;height: auto" id="foto_progress_0" src="../assets/media/misc/rumah_0.jpg">
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<h5>Progress 30%</h5>
-										<span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Selesai</span>
-										<div style="margin-top:20px">
-
-										</div>
-										<div style="margin-top:20px">
-											<img style="width: 100%;height: auto" id="foto_progress_30" src="../assets/media/misc/rumah_0.jpg">
+										<div class="kt-portlet__head-toolbar">
+											<div class="btn-group">
+												<a href="tambah_admin.html" class="btn btn-success">
+													<i class="fa fa-plus"></i>
+													<span class="kt-hidden-mobile">Tambah Admin</span>
+												</a>
+											</div>
 										</div>
 									</div>
-									<div class="col-sm-4">
-										<h5>Progress 100%</h5>
-										<span class="kt-badge kt-badge--warning kt-badge--inline kt-badge--pill kt-badge--rounded">Sedang Berlangsung</span>
-										<div style="margin-top:20px">
-
-										</div>
-										<div style="margin-top:20px;display: none">
-											<img style="width: 100%;height: auto" id="foto_progress_30" src="../assets/media/misc/rumah_0.jpg">
-										</div>
+									<div class="kt-portlet__body">
+										<table class="kt-datatable table table-striped- table-bordered table-hover table-checkable" id="tbl_list_akun">
+											<thead>
+												<tr>
+													<th>No</th>
+													<th>Nama</th>
+													<th>Username</th>
+													<th>Level</th>
+													<th>Aksi</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Ahmad Rifaldi</td>
+													<td>rif4l</td>
+													<td>
+														<span style="color: white" class="btn btn-success">Super Admin</span>
+													</td>
+													<td>
+														<button type="button" data-toggle="modal" data-target=".reset_password" class="btn btn-danger">Reset Password</button>	
+													</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Ahmad Rifaldi</td>
+													<td>rif4l</td>
+													<td>
+														<span style="color: white" class="btn btn-success">Super Admin</span>
+													</td>
+													<td>
+														<button type="button" data-toggle="modal" data-target=".reset_password" class="btn btn-danger">Reset Password</button>	
+													</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Ahmad Rifaldi</td>
+													<td>rif4l</td>
+													<td>
+														<span style="color: white" class="btn btn-warning">Fasilitator</span>
+													</td>
+													<td>
+														<button type="button" data-toggle="modal" data-target=".reset_password" class="btn btn-danger">Reset Password</button>	
+													</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Ahmad Rifaldi</td>
+													<td>rif4l</td>
+													<td>
+														<span style="color: white" class="btn btn-warning">Fasilitator</span>
+													</td>
+													<td>
+														<button type="button" data-toggle="modal" data-target=".reset_password" class="btn btn-danger">Reset Password</button>	
+													</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Ahmad Rifaldi</td>
+													<td>rif4l</td>
+													<td>
+														<span style="color: white" class="btn btn-warning">Fasilitator</span>
+													</td>
+													<td>
+														<button type="button" data-toggle="modal" data-target=".reset_password" class="btn btn-danger">Reset Password</button>	
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="">
-							<div class="kt-portlet__head kt-portlet__head--lg">
-								<div class="kt-portlet__head-label">
-									<h3 class="kt-portlet__head-title">Edit Progress</h3>
-								</div>
-							</div>
-							<form class="kt-form">
-								<div class="kt-portlet__body">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Nama Penerima</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_penerima" name="nama_penerima">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">NIK</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="1313131313131" id="nik_penerima" name="nik_penerima">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Progress</label>
-										<div class="col-8">
-											<select class="form-control" name="progress_pekerjaan" onchange="showDiv(this)" name="progress_keseluruhan">
-												<option value="0" >--Pilih Progress--</option>
-												<option value="1">0%</option>
-												<option value="2">30%</option>
-												<option value="3">100%</option>
-											</select>
-										</div>
-									</div>
-									<div id="proggress_0" class="form-group row" style="display: none;">
-										<label for="example-text-input" class="col-4 col-form-label">Foto Progress 0%</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input na type="file" class="custom-file-input" id="foto_progress_0" name="foto_progress_0">
-												<label class="custom-file-label" for="customFile">Pilih file</label>
-											</div>
-										</div>
-									</div>
-									<div id="proggress_30" class="form-group row" style="display: none;">
-										<label for="example-text-input" class="col-4 col-form-label">Foto Progress 30%</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="foto_progress_30" name="foto_progress_30">
-												<label class="custom-file-label" for="customFile">Pilih file</label>
-											</div>
-										</div>
-									</div>
-									<div id="proggress_100" class="form-group row" style="display: none">
-										<label for="example-text-input" class="col-4 col-form-label">Foto Progress 100%</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="foto_progress_100" name="foto_progress_100">
-												<label class="custom-file-label" for="customFile">Pilih file</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Toko</label>
-										<div class="col-8">
-											<select class="form-control select-2" name="toko">
-												<option value="0" >--Pilih Progress Toko--</option>
-												<option value="1">0%</option>
-												<option value="2">30 %</option>
-												<option value="3">100%</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Bank</label>
-										<div class="col-8">
-											<select class="form-control select-2" name="bank">
-												<option value="0" >--Pilih Bank--</option>
-												<option value="1">Bank 1</option>
-												<option value="2">Bank 2</option>
-												<option value="3">Bank 3</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Bobot Progress</label>
-										<div class="col-8">
-											<select style="width: 100%" class="form-control m-select2 select-2" name="bobot_progress">
-												<option value="0">--Pilih Bobot Progress--</option>
-												<option value="1">Koordinasi dengan para pemangku kepentingan* - 1</option>
-												<option value="2">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
-												<option value="3">Sosialisasi / Penyuluhan - 5</option>
-												<option value="4">Verifikasi Calon Penerima Bantuan - 9</option>
-												<option value="5">Pengorganisasian Calon Penerima Bantuan - 11</option>
-												<option value="6">Penyusunan Proposal - 16</option>
-												<option value="7">Penetapan SK Penerima BSPS oleh PPK - 24</option>
-												<option value="8">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
-												<option value="9">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
-												<option value="10">Pemesanan Bahan Bangunan Tahap I - 30</option>
-												<option value="11">Penerimaan Bahan Bangunan Tahap I - 37</option>
-												<option value="12">Transfer Dana BSPS Tahap I ke Toko Bahan Bangunan - 42</option>
-												<option value="13">Pelaksanaan Konstruksi Tahan I - 62</option>
-												<option value="14">Laporan Penggunaan Dana Tahap I -Progress Fisik- - 64</option>
-												<option value="15">Pemesanan Bahan Bangunan Tahap II - 66</option>
-												<option value="16">Penerimaan bahan bangunan Tahap II - 73</option>
-												<option value="17">Transfer Dana BSPS Tahap II ke Toko Bahan Bangunan - 78</option>
-												<option value="18">Pelaksanaan Konstruksi Tahap II - 98</option>
-												<option value="19">Laporan Pengguanan Dana Tahap II -Progress Fisik- - 100</option>
-												<option value="20">Koordinasi dengan para Pemangku Kepentingan* - 1</option>
-												<option value="21">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
-												<option value="22">Sosialisasi / Penyuluhan - 5</option>
-												<option value="23">Verifikasi Calon Penerima Bantuan - 9</option>
-												<option value="24">Pengorganisasian Calon Penerima Bantuan - 11</option>
-												<option value="25">Penyusunan Proposal - 16</option>
-												<option value="26">Penetapan SK Penerima BSPS oleh PPK - 24</option>
-												<option value="27">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
-												<option value="28">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
-												<option value="29">Pemesanan Banah Bangunan Tahan I - 30</option>
-												<option value="30">Penerimaan Bahan Bangunan Tahap I - 37</option>
-												<option value="31">Transfer Dana BSPS Tahap  I ke Toko Bahan Bangunan</option>
-												<option value="32">Pelaksanaan Konstruksi Tahap I - 57</option>
-												<option value="33">Penarikan Dana BSPS untuk Upak Kerja Tahap I - 59.5</option>
-												<option value="34">Progress Fisik Rumah 30% - 62</option>
-												<option value="35">Laporan Penggunaan Dana Tahap I -Progres fisik- - 64</option>
-												<option value="36">Pemesanan Bahan bangunan Tahap II - 66</option>
-												<option value="37">Pengiriman Bahan Bangunan Tahap II - 73</option>
-												<option value="38">Transfer Dana BSPS tahap 2 ke Toko Bahan Bangunan - 78</option>
-												<option value="39">Pelaksanaan Konstruksi Tahap II - 93</option>
-												<option value="40">Penarikan Dana BSPS Untuk Upah Kerja Tahap II - 95.5</option>
-												<option value="41">Progress Fisik Rumah 100% - 98</option>
-												<option value="42">Laporan Penggunaan Dana Tahap II -Progress Fisik- - 100</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="kt-portlet__foot">
-									<div align="right">
-										<a href="progress.html" class="btn btn-secondary">Kembali</a>
-										<button class="btn btn-primary sweetalert2_simpan">Simpan</button>
-									</div>
-								</div>
-							</form>
-						</div>
-
-						<!--end::Portlet-->
 					</div>
 					<!-- end:: Content -->
 				</div>
-				<!-- Begin Modal -->
-				
-				<!-- End Modal -->
+				<!-- begin: modal -->
+				<div class="modal fade reset_password" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content modal-reset-password">
+							<div align="center" class="modal-body">
+								<h4 style="margin-bottom: 30px">Apakah anda ingin mereset password akun ini ?</h4>
+								<button class="btn btn-success sweetalert2_reset" data-dismiss="modal">ya</button>
+								<button class="btn btn-danger" data-dismiss="modal">tidak</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
 
@@ -547,6 +370,13 @@ License: You must have a valid license purchased only from themeforest(the above
 	</div>
 
 	<!-- end::Scrolltop -->
+
+	<!-- begin::Sticky Toolbar -->
+	<!-- end::Sticky Toolbar -->
+
+	<!-- begin::Demo Panel -->
+
+	<!-- end::Demo Panel -->
 
 	<!-- begin::Global Config(global config for global JS sciprts) -->
 	<script>
@@ -658,71 +488,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+
 	<!--end::Global App Bundle -->
-
-	<!-- Search2 -->
-	<script>
-		// Class definition
-		var KTSelect2 = function() {
-		    // Private functions
-		    var demos = function() {
-		        // Provinsi
-		        $('.select-provinsi, .provinsi_validate').select2({
-		        	placeholder: "Select a state"
-		        });
-		        // Kabupaten
-		        $('.select-kabupaten, .kabupaten_validate').select2({
-		        	placeholder: "Select a state"
-		        });
-		         // kecamatan
-		         $('.select-kecamatan, .kecamatan_validate').select2({
-		         	placeholder: "Select a state"
-		         });
-		         // desa
-		         $('.select-desa, .desa_validate').select2({
-		         	placeholder: "Select a state"
-		         });
-		         // desa
-		         $('.select-2, .select-2_validate').select2({
-		         	placeholder: "Select a state"
-		         });
-
-		     }
-
-		     var modalDemos = function() {
-		     	$('#kt_select2_modal').on('shown.bs.modal', function () {
-		            // basic
-		            $('.provinsi_modal').select2({
-		            	placeholder: "Select a state"
-		            });
-		            $('.kabupaten_modal').select2({
-		            	placeholder: "Select a state"
-		            });
-		            $('.kecamatan_modal').select2({
-		            	placeholder: "Select a state"
-		            });
-		            $('.desa_modal').select2({
-		            	placeholder: "Select a state"
-		            });
-		        });
-		     }
-
-		    // Public functions
-		    return {
-		    	init: function() {
-		    		demos();
-		    		modalDemos();
-		    	}
-		    };
-		}();
-
-		// Initialization
-		jQuery(document).ready(function() {
-			KTSelect2.init();
-		});
-	</script>
-
-	<!-- SweetAlert2 -->
 	<script>
 		// Class definition
 		var KTSweetAlert2Demo = function() {
@@ -732,11 +499,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	    	$('.sweetalert2_simpan').click(function(e) {
 	    		swal.fire("Berhasil!", "Data yang anda input telah tersimpan!", "success");
 	    	});
-	    	$('.sweetalert2_import').click(function(e) {
-	    		swal.fire("Berhasil!", "File anda berhasil diimport!", "success");
-	    	});
-	    	$('.sweetalert2_hapus').click(function(e) {
-	    		swal.fire("Berhasil!", "Data anda telah dihapus!", "success");
+	    	$('.sweetalert2_reset').click(function(e) {
+	    		swal.fire("Berhasil!", "Password Akun Telah di Reset!", "success");
 	    	});
 
 	        // Sweetalert Demo 5
@@ -769,10 +533,9 @@ License: You must have a valid license purchased only from themeforest(the above
 			KTSweetAlert2Demo.init();
 		});
 	</script>
-
 	<!-- Datatable -->
 	<script type="text/javascript">
-		var tbl_list_bobot_progress = $('#tbl_list_bobot_progress').KTDatatable({
+		var tbl_list_akun = $('#tbl_list_akun').KTDatatable({
 			data: {
 				saveState: {cookie: false},
 				/*type: 'remote',
@@ -816,37 +579,21 @@ License: You must have a valid license purchased only from themeforest(the above
 			{
 				field: 'No',
 				textAlign: 'center',
-				width : 30,
+				width: 60
 
 			},
 			{
-				field: 'Nama Penerima',
+				field: 'Nama',
 				textAlign: 'center',
 
 			},
 			{
-				field: 'NIK',
+				field: 'Username',
 				textAlign: 'center',
 
 			},
 			{
-				field: 'Progress',
-				textAlign: 'center',
-				width : 60,
-
-			},
-			{
-				field: 'Toko',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'Bank',
-				textAlign: 'center',
-
-			},
-			{
-				field: 'Bobot Pekerjaan',
+				field: 'Level',
 				textAlign: 'center',
 
 			},
@@ -858,24 +605,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			],
 		});
 	</script>
-	<script type="text/javascript">
-		function showDiv(select){
-			if(select.value==1){
-				document.getElementById('proggress_0').style.display = "flex";
-				document.getElementById('proggress_30').style.display = "none";
-				document.getElementById('proggress_100').style.display = "none";
-			} else if (select.value==2){
-				document.getElementById('proggress_0').style.display = "none";
-				document.getElementById('proggress_30').style.display = "flex";
-				document.getElementById('proggress_100').style.display = "none";
-			}else if (select.value==3) {
-				document.getElementById('proggress_0').style.display = "none";
-				document.getElementById('proggress_30').style.display = "none";
-				document.getElementById('proggress_100').style.display = "flex";
-			}
-		}
-	</script>
 </body>
 
 <!-- end::Body -->
-</html><a href=""></a>
+</html>
