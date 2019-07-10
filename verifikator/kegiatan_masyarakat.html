@@ -105,8 +105,6 @@
 		</div>
 		<div class="kt-header-mobile__toolbar">
 			<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
 		</div>
 	</div>
 
@@ -423,129 +421,131 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Nama Kegiatan</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan" name="nama_kegiatan">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Provinsi</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-provinsi" name="provinsi" name="">
-											<option value="0">--Pilih Provinsi--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Kabupaten</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
-											<option value="0">--Pilih Kabupaten--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Kecamatan</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kecamatan">
-											<option value="0">--Pilih Kecamatan--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Desa</label>
-									<div class="col-9">
-										<select style="width: 100%" class="form-control m-select2 select-desa" name="desa">
-											<option value="0">--Pilih Desa--</option>
-											<option value="1">Area 1</option>
-											<option value="2">Area 2</option>
-											<option value="3">Area 3</option>
-											<option value="4">Area 4</option>
-											<option value="5">Area 5</option>
-											<option value="6">Area 6</option>
-											<option value="7">Area 7</option>
-											<option value="8">Area 8</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tanggal Pelaksanaan</label>
-									<div class="col-9">
-										<input class="form-control" type="date" placeholder="contoh 09/25/2019" name="tanggal_pelaksanaan_kegiatan">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Jenis Kegiatan(Rembuk)</label>
-									<div class="col-9">
-										<select class="form-control" id="jenis_kegiatan" name="jenis_kegiatan">
-											<option value="0">-Pilih jenis kegiatan-</option>
-											<option value="1">Kegiatan 1</option>
-											<option value="2">Kegiatan 2</option>
-											<option value="3">Kegiatan 3</option>
-											<option value="4">Kegiatan 4</option>
-											<option value="5">Kegiatan 5</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Narasi</label>
-									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="narasi_kegiatan" rows="3" placeholder="input narasi" name="narasi_kegiatan"></textarea>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Jumlah Peserta</label>
-									<div class="col-9">
-										<div style="margin-bottom: 20px" class="input-group">
-											<input id="jumlah_peserta_laki_laki" type="number" min="0" class="form-control" placeholder="jumlah user laki-laki" aria-describedby="basic-addon2" name="jumlah_peserta_laki_laki">
-											<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
-										</div>
-										<div class="input-group">
-											<input id="jumlah_peserta_perempuan" min="0" type="number" class="form-control" placeholder="jumlah user perempuan" aria-describedby="basic-addon2" name="jumlah_peserta_perempuan">
-											<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+							<form class="kt-form">
+								<div class="modal-body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Nama Kegiatan</label>
+										<div class="col-9">
+											<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan" name="nama_kegiatan">
 										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Foto Kegiatan</label>
-									<div class="col-9">
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_kegiatan" name="foto_kegiatan">
-											<label class="custom-file-label" for="customFile">Choose file</label>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Provinsi</label>
+										<div class="col-9">
+											<select style="width: 100%" class="form-control m-select2 select-provinsi" name="provinsi">
+												<option value="0">--Pilih Provinsi--</option>
+												<option value="1">Area 1</option>
+												<option value="2">Area 2</option>
+												<option value="3">Area 3</option>
+												<option value="4">Area 4</option>
+												<option value="5">Area 5</option>
+												<option value="6">Area 6</option>
+												<option value="7">Area 7</option>
+												<option value="8">Area 8</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Kabupaten</label>
+										<div class="col-9">
+											<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kabupaten">
+												<option value="0">--Pilih Kabupaten--</option>
+												<option value="1">Area 1</option>
+												<option value="2">Area 2</option>
+												<option value="3">Area 3</option>
+												<option value="4">Area 4</option>
+												<option value="5">Area 5</option>
+												<option value="6">Area 6</option>
+												<option value="7">Area 7</option>
+												<option value="8">Area 8</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Kecamatan</label>
+										<div class="col-9">
+											<select style="width: 100%" class="form-control m-select2 select-kabupaten" name="kecamatan">
+												<option value="0">--Pilih Kecamatan--</option>
+												<option value="1">Area 1</option>
+												<option value="2">Area 2</option>
+												<option value="3">Area 3</option>
+												<option value="4">Area 4</option>
+												<option value="5">Area 5</option>
+												<option value="6">Area 6</option>
+												<option value="7">Area 7</option>
+												<option value="8">Area 8</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Desa</label>
+										<div class="col-9">
+											<select style="width: 100%" class="form-control m-select2 select-desa" name="desa">
+												<option value="0">--Pilih Desa--</option>
+												<option value="1">Area 1</option>
+												<option value="2">Area 2</option>
+												<option value="3">Area 3</option>
+												<option value="4">Area 4</option>
+												<option value="5">Area 5</option>
+												<option value="6">Area 6</option>
+												<option value="7">Area 7</option>
+												<option value="8">Area 8</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Tanggal Pelaksanaan</label>
+										<div class="col-9">
+											<input class="form-control" type="date" placeholder="contoh 09/25/2019" name="tanggal_pelaksanaan_kegiatan">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Jenis Kegiatan(Rembuk)</label>
+										<div class="col-9">
+											<select class="form-control" id="jenis_kegiatan" name="jenis_kegiatan">
+												<option value="0">-Pilih jenis kegiatan-</option>
+												<option value="1">Kegiatan 1</option>
+												<option value="2">Kegiatan 2</option>
+												<option value="3">Kegiatan 3</option>
+												<option value="4">Kegiatan 4</option>
+												<option value="5">Kegiatan 5</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Narasi</label>
+										<div class="col-9">
+											<textarea style="resize: none" class="form-control" id="narasi_kegiatan" rows="3" placeholder="input narasi" name="narasi_kegiatan"></textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Jumlah Peserta</label>
+										<div class="col-9">
+											<div style="margin-bottom: 20px" class="input-group">
+												<input id="jumlah_peserta_laki_laki" type="number" min="0" class="form-control" placeholder="jumlah peserta laki-laki" aria-describedby="basic-addon2" name="jumlah_peserta_laki_laki">
+												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+											</div>
+											<div class="input-group">
+												<input id="jumlah_peserta_perempuan" min="0" type="number" class="form-control" placeholder="jumlah peserta perempuan" aria-describedby="basic-addon2" name="jumlah_peserta_perempuan">
+												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Foto Kegiatan</label>
+										<div class="col-9">
+											<div class="custom-file">
+												<input type="file" class="custom-file-input" id="foto_kegiatan" name="foto_kegiatan">
+												<label class="custom-file-label" for="customFile">Choose file</label>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
-							</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+									<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -559,6 +559,7 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
+							<form class="kt-form">
 							<div class="modal-body">
 								<div class="form-group row">
 									<label for="example-text-input" class="col-3 col-form-label">Nama Kegiatan</label>
@@ -682,6 +683,7 @@
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 								<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>
