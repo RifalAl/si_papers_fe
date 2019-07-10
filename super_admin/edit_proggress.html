@@ -370,136 +370,138 @@ License: You must have a valid license purchased only from themeforest(the above
 									<h3 class="kt-portlet__head-title">Edit Progress</h3>
 								</div>
 							</div>
-							<div class="kt-portlet__body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Nama Penerima</label>
-									<div class="col-8">
-										<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_penerima" name="nama_penerima">
+							<form class="kt-form">
+								<div class="kt-portlet__body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Nama Penerima</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_penerima" name="nama_penerima">
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">NIK</label>
-									<div class="col-8">
-										<input disabled="" class="form-control" type="text" value="1313131313131" id="nik_penerima" name="nik_penerima">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">NIK</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="1313131313131" id="nik_penerima" name="nik_penerima">
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Progress</label>
-									<div class="col-8">
-										<select class="form-control" name="progress_pekerjaan" onchange="showDiv(this)" name="progress_keseluruhan">
-											<option value="0" >--Pilih Progress--</option>
-											<option value="1">0%</option>
-											<option value="2">30%</option>
-											<option value="3">100%</option>
-										</select>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Progress</label>
+										<div class="col-8">
+											<select class="form-control" name="progress_pekerjaan" onchange="showDiv(this)" name="progress_keseluruhan">
+												<option value="0" >--Pilih Progress--</option>
+												<option value="1">0%</option>
+												<option value="2">30%</option>
+												<option value="3">100%</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div id="proggress_0" class="form-group row" style="display: none;">
-									<label for="example-text-input" class="col-4 col-form-label">Foto Progress 0%</label>
-									<div class="col-8">
-										<div class="custom-file">
-											<input na type="file" class="custom-file-input" id="foto_progress_0" name="foto_progress_0">
-											<label class="custom-file-label" for="customFile">Pilih file</label>
+									<div id="proggress_0" class="form-group row" style="display: none;">
+										<label for="example-text-input" class="col-4 col-form-label">Foto Progress 0%</label>
+										<div class="col-8">
+											<div class="custom-file">
+												<input na type="file" class="custom-file-input" id="foto_progress_0" name="foto_progress_0">
+												<label class="custom-file-label" for="customFile">Pilih file</label>
+											</div>
+										</div>
+									</div>
+									<div id="proggress_30" class="form-group row" style="display: none;">
+										<label for="example-text-input" class="col-4 col-form-label">Foto Progress 30%</label>
+										<div class="col-8">
+											<div class="custom-file">
+												<input type="file" class="custom-file-input" id="foto_progress_30" name="foto_progress_30">
+												<label class="custom-file-label" for="customFile">Pilih file</label>
+											</div>
+										</div>
+									</div>
+									<div id="proggress_100" class="form-group row" style="display: none">
+										<label for="example-text-input" class="col-4 col-form-label">Foto Progress 100%</label>
+										<div class="col-8">
+											<div class="custom-file">
+												<input type="file" class="custom-file-input" id="foto_progress_100" name="foto_progress_100">
+												<label class="custom-file-label" for="customFile">Pilih file</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Toko</label>
+										<div class="col-8">
+											<select class="form-control select-2" name="toko">
+												<option value="0" >--Pilih Progress Toko--</option>
+												<option value="1">0%</option>
+												<option value="2">30 %</option>
+												<option value="3">100%</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Bank</label>
+										<div class="col-8">
+											<select class="form-control select-2" name="bank">
+												<option value="0" >--Pilih Bank--</option>
+												<option value="1">Bank 1</option>
+												<option value="2">Bank 2</option>
+												<option value="3">Bank 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Bobot Progress</label>
+										<div class="col-8">
+											<select style="width: 100%" class="form-control m-select2 select-2" name="bobot_progress">
+												<option value="0">--Pilih Bobot Progress--</option>
+												<option value="1">Koordinasi dengan para pemangku kepentingan* - 1</option>
+												<option value="2">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
+												<option value="3">Sosialisasi / Penyuluhan - 5</option>
+												<option value="4">Verifikasi Calon Penerima Bantuan - 9</option>
+												<option value="5">Pengorganisasian Calon Penerima Bantuan - 11</option>
+												<option value="6">Penyusunan Proposal - 16</option>
+												<option value="7">Penetapan SK Penerima BSPS oleh PPK - 24</option>
+												<option value="8">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
+												<option value="9">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
+												<option value="10">Pemesanan Bahan Bangunan Tahap I - 30</option>
+												<option value="11">Penerimaan Bahan Bangunan Tahap I - 37</option>
+												<option value="12">Transfer Dana BSPS Tahap I ke Toko Bahan Bangunan - 42</option>
+												<option value="13">Pelaksanaan Konstruksi Tahan I - 62</option>
+												<option value="14">Laporan Penggunaan Dana Tahap I -Progress Fisik- - 64</option>
+												<option value="15">Pemesanan Bahan Bangunan Tahap II - 66</option>
+												<option value="16">Penerimaan bahan bangunan Tahap II - 73</option>
+												<option value="17">Transfer Dana BSPS Tahap II ke Toko Bahan Bangunan - 78</option>
+												<option value="18">Pelaksanaan Konstruksi Tahap II - 98</option>
+												<option value="19">Laporan Pengguanan Dana Tahap II -Progress Fisik- - 100</option>
+												<option value="20">Koordinasi dengan para Pemangku Kepentingan* - 1</option>
+												<option value="21">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
+												<option value="22">Sosialisasi / Penyuluhan - 5</option>
+												<option value="23">Verifikasi Calon Penerima Bantuan - 9</option>
+												<option value="24">Pengorganisasian Calon Penerima Bantuan - 11</option>
+												<option value="25">Penyusunan Proposal - 16</option>
+												<option value="26">Penetapan SK Penerima BSPS oleh PPK - 24</option>
+												<option value="27">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
+												<option value="28">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
+												<option value="29">Pemesanan Banah Bangunan Tahan I - 30</option>
+												<option value="30">Penerimaan Bahan Bangunan Tahap I - 37</option>
+												<option value="31">Transfer Dana BSPS Tahap  I ke Toko Bahan Bangunan</option>
+												<option value="32">Pelaksanaan Konstruksi Tahap I - 57</option>
+												<option value="33">Penarikan Dana BSPS untuk Upak Kerja Tahap I - 59.5</option>
+												<option value="34">Progress Fisik Rumah 30% - 62</option>
+												<option value="35">Laporan Penggunaan Dana Tahap I -Progres fisik- - 64</option>
+												<option value="36">Pemesanan Bahan bangunan Tahap II - 66</option>
+												<option value="37">Pengiriman Bahan Bangunan Tahap II - 73</option>
+												<option value="38">Transfer Dana BSPS tahap 2 ke Toko Bahan Bangunan - 78</option>
+												<option value="39">Pelaksanaan Konstruksi Tahap II - 93</option>
+												<option value="40">Penarikan Dana BSPS Untuk Upah Kerja Tahap II - 95.5</option>
+												<option value="41">Progress Fisik Rumah 100% - 98</option>
+												<option value="42">Laporan Penggunaan Dana Tahap II -Progress Fisik- - 100</option>
+											</select>
 										</div>
 									</div>
 								</div>
-								<div id="proggress_30" class="form-group row" style="display: none;">
-									<label for="example-text-input" class="col-4 col-form-label">Foto Progress 30%</label>
-									<div class="col-8">
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_progress_30" name="foto_progress_30">
-											<label class="custom-file-label" for="customFile">Pilih file</label>
-										</div>
+								<div class="kt-portlet__foot">
+									<div align="right">
+										<a href="progress.html" class="btn btn-secondary">Kembali</a>
+										<button class="btn btn-primary sweetalert2_simpan">Simpan</button>
 									</div>
 								</div>
-								<div id="proggress_100" class="form-group row" style="display: none">
-									<label for="example-text-input" class="col-4 col-form-label">Foto Progress 100%</label>
-									<div class="col-8">
-										<div class="custom-file">
-											<input type="file" class="custom-file-input" id="foto_progress_100" name="foto_progress_100">
-											<label class="custom-file-label" for="customFile">Pilih file</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Toko</label>
-									<div class="col-8">
-										<select class="form-control select-2" name="toko">
-											<option value="0" >--Pilih Progress Toko--</option>
-											<option value="1">0%</option>
-											<option value="2">30 %</option>
-											<option value="3">100%</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Bank</label>
-									<div class="col-8">
-										<select class="form-control select-2" name="bank">
-											<option value="0" >--Pilih Bank--</option>
-											<option value="1">Bank 1</option>
-											<option value="2">Bank 2</option>
-											<option value="3">Bank 3</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Bobot Progress</label>
-									<div class="col-8">
-										<select style="width: 100%" class="form-control m-select2 select-2" name="bobot_progress">
-											<option value="0">--Pilih Bobot Progress--</option>
-											<option value="1">Koordinasi dengan para pemangku kepentingan* - 1</option>
-											<option value="2">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
-											<option value="3">Sosialisasi / Penyuluhan - 5</option>
-											<option value="4">Verifikasi Calon Penerima Bantuan - 9</option>
-											<option value="5">Pengorganisasian Calon Penerima Bantuan - 11</option>
-											<option value="6">Penyusunan Proposal - 16</option>
-											<option value="7">Penetapan SK Penerima BSPS oleh PPK - 24</option>
-											<option value="8">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
-											<option value="9">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
-											<option value="10">Pemesanan Bahan Bangunan Tahap I - 30</option>
-											<option value="11">Penerimaan Bahan Bangunan Tahap I - 37</option>
-											<option value="12">Transfer Dana BSPS Tahap I ke Toko Bahan Bangunan - 42</option>
-											<option value="13">Pelaksanaan Konstruksi Tahan I - 62</option>
-											<option value="14">Laporan Penggunaan Dana Tahap I -Progress Fisik- - 64</option>
-											<option value="15">Pemesanan Bahan Bangunan Tahap II - 66</option>
-											<option value="16">Penerimaan bahan bangunan Tahap II - 73</option>
-											<option value="17">Transfer Dana BSPS Tahap II ke Toko Bahan Bangunan - 78</option>
-											<option value="18">Pelaksanaan Konstruksi Tahap II - 98</option>
-											<option value="19">Laporan Pengguanan Dana Tahap II -Progress Fisik- - 100</option>
-											<option value="20">Koordinasi dengan para Pemangku Kepentingan* - 1</option>
-											<option value="21">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
-											<option value="22">Sosialisasi / Penyuluhan - 5</option>
-											<option value="23">Verifikasi Calon Penerima Bantuan - 9</option>
-											<option value="24">Pengorganisasian Calon Penerima Bantuan - 11</option>
-											<option value="25">Penyusunan Proposal - 16</option>
-											<option value="26">Penetapan SK Penerima BSPS oleh PPK - 24</option>
-											<option value="27">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
-											<option value="28">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
-											<option value="29">Pemesanan Banah Bangunan Tahan I - 30</option>
-											<option value="30">Penerimaan Bahan Bangunan Tahap I - 37</option>
-											<option value="31">Transfer Dana BSPS Tahap  I ke Toko Bahan Bangunan</option>
-											<option value="32">Pelaksanaan Konstruksi Tahap I - 57</option>
-											<option value="33">Penarikan Dana BSPS untuk Upak Kerja Tahap I - 59.5</option>
-											<option value="34">Progress Fisik Rumah 30% - 62</option>
-											<option value="35">Laporan Penggunaan Dana Tahap I -Progres fisik- - 64</option>
-											<option value="36">Pemesanan Bahan bangunan Tahap II - 66</option>
-											<option value="37">Pengiriman Bahan Bangunan Tahap II - 73</option>
-											<option value="38">Transfer Dana BSPS tahap 2 ke Toko Bahan Bangunan - 78</option>
-											<option value="39">Pelaksanaan Konstruksi Tahap II - 93</option>
-											<option value="40">Penarikan Dana BSPS Untuk Upah Kerja Tahap II - 95.5</option>
-											<option value="41">Progress Fisik Rumah 100% - 98</option>
-											<option value="42">Laporan Penggunaan Dana Tahap II -Progress Fisik- - 100</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="kt-portlet__foot">
-								<div align="right">
-									<a href="progress.html" class="btn btn-secondary">Kembali</a>
-									<button class="btn btn-primary sweetalert2_simpan">Simpan</button>
-								</div>
-							</div>
+							</form>
 						</div>
 
 						<!--end::Portlet-->
@@ -507,161 +509,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- end:: Content -->
 				</div>
 				<!-- Begin Modal -->
-				<div class="modal fade" id="import_pb" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Import PB</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<small>silahkan pilih file PB untuk diimport</small>
-								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="customFile">
-									<label class="custom-file-label" for="customFile">pilih file PB....</label>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-primary sweetalert2_import" data-dismiss="modal">Import</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Modal Hapus -->
-				<div class="modal fade hapus" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content hapus-data">
-							<div align="center" class="modal-body">
-								<h4 style="margin-bottom: 30px">Apakah anda ingin menghapus kegiatan ini ?</h4>
-								<button class="btn btn-success sweetalert2_hapus" data-dismiss="modal">ya</button>
-								<button class="btn btn-danger" data-dismiss="modal">tidak</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Modal Progress -->
-				<div class="modal fade modal-progress" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content content-progress">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Progress</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div align="center" class="modal-body">
-								<div class="row">
-									<div class="col-sm-4">
-										<h5>Progress 0%</h5>
-										<span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Selesai</span>
-										<div style="margin-top:20px;">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="customFile">
-												<label class="custom-file-label" for="customFile">Choose file</label>
-											</div>
-										</div>
-										<div style="margin-top:20px">
-											<img style="width: 100%;height: auto" id="foto_progress_0" src="../assets/media/misc/rumah_0.jpg">
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<h5>Progress 30%</h5>
-										<span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Selesai</span>
-										<div style="margin-top:20px">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="customFile">
-												<label class="custom-file-label" for="customFile">Choose file</label>
-											</div>
-										</div>
-										<div style="margin-top:20px">
-											<img style="width: 100%;height: auto" id="foto_progress_30" src="../assets/media/misc/rumah_0.jpg">
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<h5>Progress 100%</h5>
-										<span class="kt-badge kt-badge--warning kt-badge--inline kt-badge--pill kt-badge--rounded">Sedang Berlangsung</span>
-										<div style="margin-top:20px">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="customFile">
-												<label class="custom-file-label" for="customFile">Choose file</label>
-											</div>
-										</div>
-										<div style="margin-top:20px;display: none">
-											<img style="width: 100%;height: auto" id="foto_progress_30" src="../assets/media/misc/rumah_0.jpg">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Modal Bobot Pekerjaan -->
-				<div class="modal fade bobot-pekerjaan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content content-bobo-pekerjaan">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Update Data Progress</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group">
-									<label for="exampleSelect1">Bobot Progress</label>
-									<select style="width: 100%" class="form-control m-select2 select-2" name="bobot_progress">
-										<option value="0">--Pilih Bobot Progress--</option>
-										<option value="1">Koordinasi dengan para pemangku kepentingan* - 1</option>
-										<option value="2">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
-										<option value="3">Sosialisasi / Penyuluhan - 5</option>
-										<option value="4">Verifikasi Calon Penerima Bantuan - 9</option>
-										<option value="5">Pengorganisasian Calon Penerima Bantuan - 11</option>
-										<option value="6">Penyusunan Proposal - 16</option>
-										<option value="7">Penetapan SK Penerima BSPS oleh PPK - 24</option>
-										<option value="8">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
-										<option value="9">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
-										<option value="10">Pemesanan Bahan Bangunan Tahap I - 30</option>
-										<option value="11">Penerimaan Bahan Bangunan Tahap I - 37</option>
-										<option value="12">Transfer Dana BSPS Tahap I ke Toko Bahan Bangunan - 42</option>
-										<option value="13">Pelaksanaan Konstruksi Tahan I - 62</option>
-										<option value="14">Laporan Penggunaan Dana Tahap I -Progress Fisik- - 64</option>
-										<option value="15">Pemesanan Bahan Bangunan Tahap II - 66</option>
-										<option value="16">Penerimaan bahan bangunan Tahap II - 73</option>
-										<option value="17">Transfer Dana BSPS Tahap II ke Toko Bahan Bangunan - 78</option>
-										<option value="18">Pelaksanaan Konstruksi Tahap II - 98</option>
-										<option value="19">Laporan Pengguanan Dana Tahap II -Progress Fisik- - 100</option>
-										<option value="20">Koordinasi dengan para Pemangku Kepentingan* - 1</option>
-										<option value="21">Perekrutan dan Pembekalan Perangkat Pelaksana* - 3</option>
-										<option value="22">Sosialisasi / Penyuluhan - 5</option>
-										<option value="23">Verifikasi Calon Penerima Bantuan - 9</option>
-										<option value="24">Pengorganisasian Calon Penerima Bantuan - 11</option>
-										<option value="25">Penyusunan Proposal - 16</option>
-										<option value="26">Penetapan SK Penerima BSPS oleh PPK - 24</option>
-										<option value="27">Pencairan Dana dari KPPN ke Bank Penyalur - 26</option>
-										<option value="28">Penyaluran Dana ke Tabungan Penerima Bantuan - 28</option>
-										<option value="29">Pemesanan Banah Bangunan Tahan I - 30</option>
-										<option value="30">Penerimaan Bahan Bangunan Tahap I - 37</option>
-										<option value="31">Transfer Dana BSPS Tahap  I ke Toko Bahan Bangunan</option>
-										<option value="32">Pelaksanaan Konstruksi Tahap I - 57</option>
-										<option value="33">Penarikan Dana BSPS untuk Upak Kerja Tahap I - 59.5</option>
-										<option value="34">Progress Fisik Rumah 30% - 62</option>
-										<option value="35">Laporan Penggunaan Dana Tahap I -Progres fisik- - 64</option>
-										<option value="36">Pemesanan Bahan bangunan Tahap II - 66</option>
-										<option value="37">Pengiriman Bahan Bangunan Tahap II - 73</option>
-										<option value="38">Transfer Dana BSPS tahap 2 ke Toko Bahan Bangunan - 78</option>
-										<option value="39">Pelaksanaan Konstruksi Tahap II - 93</option>
-										<option value="40">Penarikan Dana BSPS Untuk Upah Kerja Tahap II - 95.5</option>
-										<option value="41">Progress Fisik Rumah 100% - 98</option>
-										<option value="42">Laporan Penggunaan Dana Tahap II -Progress Fisik- - 100</option>
-									</select>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-primary sweetalert2_simpan" data-dismiss="modal">Simpan</button>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				<!-- End Modal -->
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">

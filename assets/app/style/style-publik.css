@@ -37,29 +37,16 @@ i {
 	border-left: 2px solid green;
 	height: inherit
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1024px){
 	#logo_desktop {
 		display: none;
 	}
-	#kt_header_mobile_topbar_toggler {
-		display: none
+	.kt-header-mobile .kt-header-mobile__toolbar .kt-header-mobile__toolbar-toggler {
+		margin-right: 20px !important;
 	}
-}
-@media (min-width: 1025px){
-	.offset-sm-7 {
-		margin-left:  72.33333% ;
-	}
-	.portlet-nav {
-		margin-left:  0vw !important;
-	}
-}
-
-@media (min-width: 1024px){
-	.portlet-nav {
-		margin-left:  0vw !important;
-	}
-	.offset-sm-7 {
-		margin-left:  52.33333% ;
+	.pencarian_maps {
+		display: block;
 	}
 }
 
