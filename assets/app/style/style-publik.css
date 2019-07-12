@@ -63,3 +63,59 @@ i {
 	width: 100%;
 	height: 450px;
 }
+
+.pencarian_maps{
+	display: none;
+}
+.logo_footer{
+	width: 120px;
+}
+#penjelasan_bsps {
+	margin-top:45px;
+}
+#penjelasan_bsps p {
+	font-size: 1.15rem;
+}
+#informasi_penyelenggara {
+	margin-top: 40px
+}
+@media (max-width: 1024px){
+	.logo_footer{
+		width: 60px;
+	}
+	#penjelasan_bsps {
+		margin-top:15px;
+	}
+	#penjelasan_bsps p {
+		font-size: 1rem;
+	}
+	#informasi_penyelenggara {
+		margin-top: 5px;
+	}
+	.info-penyelenggara-nama {
+		font-size: 2rem;
+	}
+	.info-penyelenggara {
+		font-size: 3.4rem;
+	}
+	.pencarian_maps {
+		display: block;
+	}
+	#kt_gmap_1 {
+		height: 350px !important;
+	}
+	.dropdown-menu {
+		min-width: 18rem;
+	}
+	#foto_galeri {
+		width: 100% !important;
+	}
+	#statik_01,#statik_02,#galeri_program {
+		position: static !important;
+		margin-top: 20px !important;
+		margin-bottom: 10px;
+	}
+	.kt-footer .kt-footer__bottom .kt-footer__wrapper .kt-footer__menu {
+		display: none
+	}
+}

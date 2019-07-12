@@ -107,8 +107,16 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1"></i></button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Menu
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-48px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+					<a href="index.html" class="dropdown-item">Beranda</a>
+					<a href="galeri_publik.html" class="dropdown-item">Galeri Kegiatan</a>
+					<a href="kontak.html" class="dropdown-item">Kontak</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -154,6 +162,9 @@
 							<!-- begin:: Subheader -->
 							<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 								<div class="kt-subheader__toolbar">
+									<div id="judul_mobile">
+										<h2>Galeri Program</h2>
+									</div>
 								</div>
 							</div>
 							<!-- end:: Subheader -->
@@ -162,7 +173,7 @@
 								<!--Begin::Dashboard 5-->
 								<!--Begin::Section-->
 								<div class="row">
-									<div class="col-xl-4">
+									<div class="col-sm-12">
 										<!--begin:: Widgets/Top Products-->
 										<div class="kt-portlet kt-portlet--head-noborder kt-portlet--height-fluid ">
 											<div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
@@ -197,7 +208,7 @@
 
 										<!--end:: Widgets/Top Products-->
 									</div>
-									<div class="col-xl-4">
+									<div class="col-sm-12">
 										<!--begin:: Widgets/Top Products-->
 										<div class="kt-portlet kt-portlet--head-noborder kt-portlet--height-fluid ">
 											<div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
@@ -232,7 +243,7 @@
 
 										<!--end:: Widgets/Top Products-->
 									</div>
-									<div class="col-xl-4">
+									<div class="col-sm-12">
 										<!--begin:: Widgets/Top Products-->
 										<div class="kt-portlet kt-portlet--head-noborder kt-portlet--height-fluid ">
 											<div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
@@ -267,7 +278,7 @@
 
 										<!--end:: Widgets/Top Products-->
 									</div>
-									<div class="col-xl-4">
+									<div class="col-sm-12">
 										<!--begin:: Widgets/Top Products-->
 										<div class="kt-portlet kt-portlet--head-noborder kt-portlet--height-fluid ">
 											<div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">
@@ -302,7 +313,7 @@
 
 										<!--end:: Widgets/Top Products-->
 									</div>
-									<div class="col-xl-4">
+									<div class="col-sm-12">
 										<!--begin:: Widgets/Top Products-->
 										<div class="kt-portlet kt-portlet--head-noborder kt-portlet--height-fluid ">
 											<div class="kt-portlet__head kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm">

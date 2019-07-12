@@ -82,14 +82,14 @@
 		.form-group {
 			margin-bottom: 2rem;
 		}
+		#gambar_kontak {
+			width: 100% !important;
+		}
 		@media (min-width: 1024px){
 			.portlet-nav {
 				margin-left: 35vw !important;
 			}
 		}
-	</style>
-	<style>
-		
 	</style>
 </head>
 
@@ -112,8 +112,16 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1"></i></button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Menu
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-48px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+					<a href="index.html" class="dropdown-item">Beranda</a>
+					<a href="galeri_publik.html" class="dropdown-item">Galeri Kegiatan</a>
+					<a href="kontak.html" class="dropdown-item">Kontak</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -181,7 +189,7 @@
 											<div class="kt-portlet__body">
 												<div class="row">
 													<div class="col-sm-6">
-														<img style="height: 300px" src="../assets/media/misc/gambar-desa.jpg">
+														<img id="gambar_kontak"src="../assets/media/misc/gambar-desa.jpg">
 													</div>
 													<div class="col-sm-6">
 														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique quam a leo venenatis ultrices. Sed blandit, ligula in interdum egestas, risus elit elementum metus, quis rutrum odio leo in leo. Donec commodo varius rutrum. Aenean hendrerit elit dictum, venenatis libero luctus, auctor sem. In hac habitasse platea dictumst. Sed dapibus commodo ultrices. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -203,17 +211,17 @@
 								<div class="kt-footer__top">
 									<div class="kt-container">
 										<div  class="row">
-											<div align="right" class="col-sm-4">
-												<img style="width: 120px" src="../assets/media/misc/logo_pupr.png">
+											<div align="right" class="col-4">
+												<img class="logo_footer"  src="../assets/media/misc/logo_pupr.png">
 											</div>
-											<div align="center" class="col-sm-4">
-												<img style="width: 120px" src="../assets/media/misc/logo_bsps.png">
+											<div align="center" class="col-4">
+												<img class="logo_footer"  src="../assets/media/misc/logo_bsps.png">
 											</div>
-											<div class="col-sm-4">
-												<img style="width: 120px" src="../assets/media/misc/logo_maluku.png">
+											<div class="col-4">
+												<img class="logo_footer"  src="../assets/media/misc/logo_maluku.png">
 											</div>
-											<div style="margin-top:45px" align="center" class="offset-sm-3 col-sm-6 offset-sm-3">
-												<p style="font-size:1.15rem">Tujuan program kegiatan BSPS telah diatur di Peraturan Menteri Perumahan Rakyat Nomor 6 Tahun 2013 tentang Pedoman Pelaksanaan BSPS. Adalah terbangunnya rumah yang layak huni oleh Masyarakat Berpenghasilan Rendah (MBR)</p>
+											<div id="penjelasan_bsps" align="center" class="offset-sm-3 col-sm-6 offset-sm-3">
+												<p>Tujuan program kegiatan BSPS telah diatur di Peraturan Menteri Perumahan Rakyat Nomor 6 Tahun 2013 tentang Pedoman Pelaksanaan BSPS. Adalah terbangunnya rumah yang layak huni oleh Masyarakat Berpenghasilan Rendah (MBR)</p>
 											</div>
 										</div>
 									</div>
@@ -350,18 +358,11 @@
 
 				<!--begin::Page Vendors(used by this page) -->
 				<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-				<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-				<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
 				<!--end::Page Vendorsndors -->
 
 				<!--begin::Page Scripts(used by this page) -->
 				<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-				<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
 				<!-- Resources -->
-				<script src="https://www.amcharts.com/lib/4/core.js"></script>
-				<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-				<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
-				<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 				<!--end::Page Scripts -->
 
 				<!--begin::Global App Bundle(used by all pages) -->
