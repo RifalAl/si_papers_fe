@@ -68,7 +68,7 @@ i {
 	display: none;
 }
 .logo_footer{
-	width: 120px;
+	width: 100px;
 }
 #penjelasan_bsps {
 	margin-top:45px;
@@ -117,5 +117,19 @@ i {
 	}
 	.kt-footer .kt-footer__bottom .kt-footer__wrapper .kt-footer__menu {
 		display: none
+	}
+	.progress_0,
+	.progress_30,
+	.progress_100 {
+		margin-bottom: 0px;
+	}
+	#judul_mobile {
+		display: block !important;
+	}
+}
+
+@media (max-width: 800px) {
+	.kt-separator.kt-separator--space-lg {
+		display: block !important;
 	}
 }

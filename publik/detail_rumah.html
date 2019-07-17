@@ -112,8 +112,17 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-			<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1"></i></button>
+			<!-- <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button> -->
+			<div class="btn-group">
+				<button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Menu
+				</button>
+				<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-48px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+					<a href="index.html" class="dropdown-item">Beranda</a>
+					<a href="galeri_publik.html" class="dropdown-item">Galeri Kegiatan</a>
+					<a href="kontak.html" class="dropdown-item">Kontak</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -155,13 +164,13 @@
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
 					<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
 						<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
-
-							<!-- begin:: Subheader -->
 							<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 								<div class="kt-subheader__toolbar">
+									<div style="display: none" id="judul_mobile">
+										<h2>Detail Rumah</h2>
+									</div>
 								</div>
 							</div>
-							<!-- end:: Subheader -->
 							<!-- begin:: Content -->
 							<div class="kt-content kt-grid__item kt-grid__item--fluid">
 								<!--Begin::Dashboard 5-->
@@ -198,47 +207,47 @@
 											<!--full height portlet body-->
 											<div class="kt-portlet__body">
 												<div class="row">
-													<div class="col-sm-5">
+													<div class="col-md-5">
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Periode BSPS</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="2018" id="periode_bsps">
+																<input disabled="" class="form-control" type="text" value="2018" id="periode_bsps" name="periode_bsps">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Kategori BSPS</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="Daerah" id="kategori_bsps">
+																<input disabled="" class="form-control" type="text" value="Daerah" id="kategori_bsps" name="kategori_bsps">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">No BNBA</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="00" id="no_bnba">
+																<input disabled="" class="form-control" type="text" value="00" id="no_bnba" name="no_bnba">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Penerima BSPS</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="PETRUS SAHERTIAN" id="penerima_bsps">
+																<input disabled="" class="form-control" type="text" value="PETRUS SAHERTIAN" id="penerima_bsps" name="penerima_bsps">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">No. KTP</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="8101280969001" id="no_ktp">
+																<input disabled="" class="form-control" type="text" value="8101280969001" id="no_ktp" name="no_ktp">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Fasilitator</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="MUHAMMAD R WAKAN" id="fasilitator">
+																<input disabled="" class="form-control" type="text" value="MUHAMMAD R WAKAN" id="fasilitator" name="fasilitator">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Kelompok Penerima Bantuan</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="EFRATA" id="kelempok_bantuan">
+																<input disabled="" class="form-control" type="text" value="EFRATA" id="kelempok_bantuan" name="kelempok_bantuan">
 															</div>
 														</div>
 														<div class="form-group row">
@@ -252,7 +261,7 @@
 															<div class="col-7">
 																<div class="input-group">
 																	<div class="input-group-prepend"><span class="input-group-text">Rp.</span></div>
-																	<input disabled="" type="text" class="form-control" value="500.000 - 1.000.0000" aria-describedby="basic-addon1" id="jumlah_penghasilan">
+																	<input disabled="" type="text" class="form-control" value="500.000 - 1.000.0000" aria-describedby="basic-addon1" id="jumlah_penghasilan" name="jumlah_penghasilan">
 																</div>
 															</div>
 														</div>
@@ -260,7 +269,7 @@
 															<label for="example-text-input" class="col-5 col-form-label">Jumlah Penghuni Rumah</label>
 															<div class="col-7">
 																<div class="input-group">
-																	<input disabled="" type="text" class="form-control" value="5" aria-describedby="basic-addon1" id="jumlah_penghuni_rumah">
+																	<input disabled="" type="text" class="form-control" value="5" aria-describedby="basic-addon1" id="jumlah_penghuni_rumah" name="jumlah_penghuni_rumah">
 																	<div class="input-group-prepend"><span class="input-group-text">Orang</span></div>
 																</div>
 															</div>
@@ -268,34 +277,34 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Latitude</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="124" id="latitude">
+																<input disabled="" class="form-control" type="text" value="124" id="latitude" name="latitude">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Longitude</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="567" id="longitude">
+																<input disabled="" class="form-control" type="text" value="567" id="longitude" name="longitude">
 															</div>
 														</div>
 													</div>
 
-													<div class="offset-sm-2 col-sm-5">
+													<div class="offset-md-2 col-md-5">
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Bentuk Bantuan BSPS</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="Uang Saja" id="bentuk_bantuan_bsps">
+																<input disabled="" class="form-control" type="text" value="Uang Saja" id="bentuk_bantuan_bsps" name="bentuk_bantuan_bsps">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Kondisi Lantai</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="Tidak Layak" id="kondisi_lantai">
+																<input disabled="" class="form-control" type="text" value="Tidak Layak" id="kondisi_lantai" name="kondisi_lantai">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Kondisi Dinding</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="Tidak Layak" id="kondisi_dinding">
+																<input disabled="" class="form-control" type="text" value="Tidak Layak" id="kondisi_dinding" name="kondisi_dinding">
 															</div>
 														</div>
 														<div class="form-group row">
@@ -307,19 +316,19 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Jenis Kerusakan</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="PK Berat" id="jenis_kerusakan">
+																<input disabled="" class="form-control" type="text" value="PK Berat" id="jenis_kerusakan" name="kondisi_atap">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Jenis Kegiatan</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="PK Berat" id="jenis_kegiatan">
+																<input disabled="" class="form-control" type="text" value="PK Berat" id="jenis_kegiatan" name="jenis_kegiatan">
 															</div>
 														</div>
 														<div class="form-group row">
 															<label for="example-text-input" class="col-5 col-form-label">Kebutuhan Khusus</label>
 															<div class="col-7">
-																<input disabled="" class="form-control" type="text" value="normal" id="kebutuhan_khusus">
+																<input disabled="" class="form-control" type="text" value="normal" id="kebutuhan_khusus" name="kebutuhan_khusus">
 															</div>
 														</div>
 														<div class="form-group row">
@@ -327,7 +336,7 @@
 															<div class="col-7">
 																<div class="input-group">
 																	<div class="input-group-prepend"><span class="input-group-text">Rp.</span></div>
-																	<input disabled="" type="text" class="form-control" value="15" aria-describedby="basic-addon1" id="jumlah_bantuan">
+																	<input disabled="" type="text" class="form-control" value="15" aria-describedby="basic-addon1" id="jumlah_bantuan" name="jumlah_bantuan">
 																</div>
 															</div>
 														</div>
@@ -336,7 +345,7 @@
 															<div class="col-7">
 																<div class="input-group">
 																	<div class="input-group-prepend"><span class="input-group-text">Rp.</span></div>
-																	<input disabled="" type="text" class="form-control" value="15" aria-describedby="basic-addon1" id="nilai_proposal">
+																	<input disabled="" type="text" class="form-control" value="15" aria-describedby="basic-addon1" id="nilai_proposal" name="nilai_proposal">
 																</div>
 															</div>
 														</div>
@@ -345,7 +354,7 @@
 															<div class="col-7">
 																<div class="input-group">
 																	<div class="input-group-prepend"><span class="input-group-text">Rp.</span></div>
-																	<input disabled="" type="text" class="form-control" value="15" aria-describedby="basic-addon1" id="nilai_swadaya">
+																	<input disabled="" type="text" class="form-control" value="15" aria-describedby="basic-addon1" id="nilai_swadaya" name="nilai_swadaya">
 																</div>
 															</div>
 														</div>
@@ -378,35 +387,35 @@
 											<!--full height portlet body-->
 											<div class="kt-portlet__body">
 												<div class="row">
-													<div class="col-sm-4">
+													<div class="col-md-4 progress_0">
 														<h5>Progress 0%</h5>
 														<span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Selesai</span>
 														<div style="margin-top:20px;">
-															
 														</div>
 														<div style="margin-top:20px">
 															<img style="width: 100%;height: auto" id="foto_progress_0" src="../assets/media/misc/rumah_0.jpg">
 														</div>
+														<div style="display: none" class="kt-separator kt-separator--border-dashed kt-separator--space-lg pemisah"></div>
 													</div>
-													<div class="col-sm-4">
+													<div class="col-md-4 progress_30">
 														<h5>Progress 30%</h5>
 														<span class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Selesai</span>
 														<div style="margin-top:20px">
-															
 														</div>
 														<div style="margin-top:20px">
 															<img style="width: 100%;height: auto" id="foto_progress_30" src="../assets/media/misc/rumah_0.jpg">
 														</div>
+														<div style="display: none" class="kt-separator kt-separator--border-dashed kt-separator--space-lg pemisah"></div>
 													</div>
-													<div class="col-sm-4">
+													<div class="col-md-4 progress_100">
 														<h5>Progress 100%</h5>
 														<span class="kt-badge kt-badge--warning kt-badge--inline kt-badge--pill kt-badge--rounded">Sedang Berlangsung</span>
 														<div style="margin-top:20px">
-															
 														</div>
 														<div style="margin-top:20px;display: none">
-															<img style="width: 100%;height: auto" id="foto_progress_30" src="../assets/media/misc/rumah_0.jpg">
+															<img style="width: 100%;height: auto" id="foto_progress_100" src="../assets/media/misc/rumah_0.jpg">
 														</div>
+														<div style="display: none" class="kt-separator kt-separator--border-dashed kt-separator--space-lg pemisah"></div>
 													</div>
 												</div>
 											</div>
@@ -422,17 +431,17 @@
 								<div class="kt-footer__top">
 									<div class="kt-container">
 										<div  class="row">
-											<div align="right" class="col-sm-4">
-												<img style="width: 120px" src="../assets/media/misc/logo_pupr.png">
+											<div align="right" class="col-4">
+												<img class="logo_footer" src="../assets/media/misc/logo_pupr.png">
 											</div>
-											<div align="center" class="col-sm-4">
-												<img style="width: 120px" src="../assets/media/misc/logo_bsps.png">
+											<div align="center" class="col-4">
+												<img class="logo_footer" src="../assets/media/misc/logo_bsps.png">
 											</div>
-											<div class="col-sm-4">
-												<img style="width: 120px" src="../assets/media/misc/logo_maluku.png">
+											<div class="col-4">
+												<img class="logo_footer"  src="../assets/media/misc/logo_maluku.png">
 											</div>
-											<div style="margin-top:45px" align="center" class="offset-sm-3 col-sm-6 offset-sm-3">
-												<p style="font-size:1.15rem">Tujuan program kegiatan BSPS telah diatur di Peraturan Menteri Perumahan Rakyat Nomor 6 Tahun 2013 tentang Pedoman Pelaksanaan BSPS. Adalah terbangunnya rumah yang layak huni oleh Masyarakat Berpenghasilan Rendah (MBR)</p>
+											<div id="penjelasan_bsps"  align="center" class="offset-sm-3 col-sm-6 offset-sm-3">
+												<p>Tujuan program kegiatan BSPS telah diatur di Peraturan Menteri Perumahan Rakyat Nomor 6 Tahun 2013 tentang Pedoman Pelaksanaan BSPS. Adalah terbangunnya rumah yang layak huni oleh Masyarakat Berpenghasilan Rendah (MBR)</p>
 											</div>
 										</div>
 									</div>
