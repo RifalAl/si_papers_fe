@@ -2,7 +2,7 @@ body {
 	color: #2e2e2e;
 }
 i {
-	margin-right: 10px;
+	margin-right: 6px;
 }
 /
 .kt-menu__item > .kt-menu__link .kt-menu__link-text {
@@ -93,7 +93,7 @@ i {
 	}
 	
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#filter_objek,
 	#filter_lokasi,
 	#filter_progress {
