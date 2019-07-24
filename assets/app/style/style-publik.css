@@ -1,4 +1,3 @@
-
 body {
 	color: #2e2e2e;
 }
@@ -37,7 +36,51 @@ i {
 	border-left: 2px solid green;
 	height: inherit
 }
+#filter_objek,
+#filter_lokasi,
+#filter_progress {
+	height: 100%;
+	border-right: 2px solid #616161;
+}
+#filter_objek,
+#filter_lokasi,
+#filter_progress,
+#filter_periode {
+	cursor: pointer;
+}
+#f_objek {
+	top: -3px !important;
+	left: -15px !important;
+	width: 23vw;
+}
+#f_lokasi,#f_progress {
+	top: 5px !important;
+	left: -20px !important;
+	width: 23.6vw;
+}
+#f_periode {
+	top: 12px !important;
+	left: -18px !important;
+	width: 24.4vw;
+}
+.btn-link {
+	font-size: 1.23rem;
+	font-weight: 500;
+	color: #212121;
+}
+#filter_objek h5,
+#filter_lokasi h5,
+#filter_progress h5,
+#filter_periode h5{
+	transition: 0.5s;
 
+}
+#filter_objek h5:hover,
+#filter_lokasi h5:hover,
+#filter_progress h5:hover,
+#filter_periode h5:hover{
+	font-size:1.6rem;
+}
 @media (max-width: 1024px){
 	#logo_desktop {
 		display: none;
@@ -48,9 +91,40 @@ i {
 	.pencarian_maps {
 		display: block;
 	}
+	
 }
-
-
+@media (max-width: 768px) {
+	#filter_objek,
+	#filter_lokasi,
+	#filter_progress {
+		height: 100%;
+		border-right: transparent;
+	}
+	.pembatas {
+		display: block !important;
+	}
+	#f_objek {
+		top: 3px !important;
+		left: 0px !important;
+		width: 100%;
+	}
+	#f_lokasi,#f_progress {
+		top: 12px !important;
+		left: 0px !important;
+		width: 100%;
+	}
+	#f_periode {
+		top: 11px !important;
+		left: 0px !important;
+		width: 100%;
+	}
+	#filter_objek h5:hover,
+	#filter_lokasi h5:hover,
+	#filter_progress h5:hover,
+	#filter_periode h5:hover{
+		font-size:1.4rem !important; 
+	}
+}
 #chart_01 {
 	width: 100%;
 	height: 450px;
@@ -63,7 +137,6 @@ i {
 	width: 100%;
 	height: 450px;
 }
-
 .pencarian_maps{
 	display: none;
 }
@@ -127,7 +200,6 @@ i {
 		display: block !important;
 	}
 }
-
 @media (max-width: 800px) {
 	.kt-separator.kt-separator--space-lg {
 		display: block !important;
