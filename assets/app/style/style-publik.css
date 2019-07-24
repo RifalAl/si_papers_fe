@@ -93,6 +93,7 @@ i {
 	}
 	
 }
+
 @media (max-width: 767px) {
 	#filter_objek,
 	#filter_lokasi,
@@ -123,6 +124,10 @@ i {
 	#filter_progress h5:hover,
 	#filter_periode h5:hover{
 		font-size:1.4rem !important; 
+	}
+
+	#f_progress .form-group {
+		margin-bottom: 1.5rem;
 	}
 }
 #chart_01 {
